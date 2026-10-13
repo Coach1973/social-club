@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>真公益・企業家俱樂部｜參與，就是公益</title>
+<meta name="description" content="真公益企業家俱樂部：公益不一定要很花錢，參與就是公益。以順發電腦 17 年「消費做公益」為示範，邀請企業家一起把好事做大。">
+<meta property="og:title" content="真公益・企業家俱樂部｜參與，就是公益">
+<meta property="og:description" content="以順發電腦 17 年公益為示範，邀請企業家一起把好事做大。">
+<meta property="og:image" content="https://event.bymyway.com/curated/social-club/assets/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a1f3d;          /* 深海軍藍：文字 */
+  --ink-soft:#3a5170;
+  --blue:#1c56b8;         /* 標準藍 */
+  --blue-deep:#0d3a86;
+  --blue-night:#082a63;
+  --sky:#eaf2fc;
+  --mist:#f5f8fd;
+  --line:#d5e2f4;
+  --white:#ffffff;
+  --sun:#ffd84a;          /* 唯一點綴色：來自主視覺的黃色底線 */
+  --serif:"Noto Serif TC","Songti TC",serif;
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --wrap:1240px;
+  --r:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--sans);font-size:20px;line-height:1.75;font-weight:400}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
+.skip{position:absolute;left:-999px;top:0;background:var(--sun);color:var(--ink);padding:10px 18px;z-index:99}
+.skip:focus{left:12px;top:12px}
+.eyebrow{font-family:var(--sans);font-weight:700;font-size:20px;letter-spacing:.14em;color:var(--blue)}
+.eyebrow::before{content:"";display:inline-block;width:34px;height:3px;background:currentColor;vertical-align:middle;margin-right:14px;transform:translateY(-3px)}
+h1,h2,h3{font-family:var(--serif);margin:0;letter-spacing:.01em}
+h2{font-size:clamp(40px,5vw,68px);line-height:1.18;font-weight:900}
+h3{font-size:clamp(26px,2.4vw,32px);line-height:1.35;font-weight:700}
+p{margin:0 0 1em;text-wrap:pretty}
+.lead{font-size:clamp(21px,1.7vw,24px);line-height:1.8;color:var(--ink-soft);max-width:38em}
+.hl{background:linear-gradient(transparent 68%,var(--sun) 68%,var(--sun) 92%,transparent 92%);padding:0 .06em}
+.btn{display:inline-flex;align-items:center;gap:12px;font:700 20px/1 var(--sans);padding:20px 30px;border-radius:999px;text-decoration:none;transition:transform .15s ease,background .15s ease;min-height:60px}
+.btn:hover{transform:translateY(-2px)}
+.btn-sun{background:var(--sun);color:var(--ink)}
+.btn-ghost{border:2px solid rgba(255,255,255,.75);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-deep)}
+.arrow{transition:transform .15s ease}.btn:hover .arrow{transform:translateX(4px)}
+section{position:relative}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .2s ease,box-shadow .2s ease}
+.nav.solid{background:rgba(255,255,255,.96);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:24px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;font-family:var(--serif);font-weight:900;font-size:24px;white-space:nowrap}
+.nav.solid .brand{color:var(--ink)}
+.seal{width:46px;height:46px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:24px;font-family:var(--serif);font-weight:900;box-shadow:inset 0 0 0 3px rgba(255,255,255,.35)}
+.nav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;align-items:center}
+.nav ul a{text-decoration:none;color:#fff;font-size:20px;font-weight:500;white-space:nowrap}
+.nav.solid ul a{color:var(--ink)}
+.nav ul a:hover{text-decoration:underline;text-underline-offset:8px;text-decoration-thickness:2px}
+.nav .btn{padding:14px 22px;min-height:52px}
+@media (max-width:1180px){.nav ul li.opt{display:none}}
+
+/* ---------- HERO ---------- */
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--blue-night)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(6,30,72,.55),rgba(6,30,72,0) 60%)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,30,72,.78) 0%,rgba(8,42,99,.45) 42%,rgba(8,42,99,.15) 62%,rgba(6,24,56,.82) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-top:150px;padding-bottom:64px}
+.hero .eyebrow{color:#fff}
+.hero h1{font-size:clamp(56px,8.4vw,128px);line-height:1.08;font-weight:900;margin:22px 0 48px;text-shadow:0 2px 30px rgba(0,20,60,.35)}
+.hero h1 .brush{position:relative;white-space:nowrap}
+.hero h1 .brush svg{position:absolute;left:-2%;bottom:-.14em;width:104%;height:.32em}
+.hero .lead{color:#e8f0fb;max-width:30em}
+.hero .ctas{display:flex;gap:16px;flex-wrap:wrap;margin-top:36px}
+.hero-foot{margin-top:64px;padding-top:26px;border-top:1px solid rgba(255,255,255,.3);display:flex;flex-wrap:wrap;gap:12px 40px;font-size:20px;color:#dbe7f7}
+.hero-foot b{color:#fff;font-weight:700}
+
+/* ---------- MARQUEE ---------- */
+.ribbon{background:var(--blue);color:#fff;overflow:hidden;padding:26px 0;border-bottom:1px solid var(--blue-deep)}
+.ribbon-track{display:flex;width:max-content;animation:slide 60s linear infinite}
+.ribbon:hover .ribbon-track{animation-play-state:paused}
+.ribbon span{font-family:var(--serif);font-weight:700;font-size:28px;white-space:nowrap;padding:0 28px}
+.ribbon i{font-style:normal;color:var(--sun)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---------- QUOTES ---------- */
+.quotes{padding:140px 0 120px;background:var(--mist)}
+.q-head{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:end;margin-bottom:64px}
+.q-feature{background:var(--blue-night);color:#fff;border-radius:28px;padding:72px 64px;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;margin-bottom:28px;position:relative;overflow:hidden}
+.q-feature::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:2px solid rgba(255,255,255,.12);box-shadow:0 0 0 60px rgba(255,255,255,.03),0 0 0 120px rgba(255,255,255,.025)}
+.q-mark{font-family:var(--serif);font-size:200px;line-height:.6;color:var(--sun);font-weight:900}
+.q-feature blockquote{margin:0;font-family:var(--serif);font-weight:900;font-size:clamp(46px,6vw,88px);line-height:1.15}
+.q-feature cite{display:block;margin-top:20px;font-style:normal;font-family:var(--sans);font-size:20px;color:#bcd2f0;letter-spacing:.06em}
+.q-grid{columns:3 340px;column-gap:28px}
+.q-card{break-inside:avoid;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:36px 34px 30px;margin:0 0 28px;transition:transform .2s ease,box-shadow .2s ease}
+.q-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(13,58,134,.35)}
+.q-card blockquote{margin:0 0 18px;text-wrap:pretty;font-family:var(--serif);font-weight:700;font-size:28px;line-height:1.5;color:var(--ink)}
+.q-card.big blockquote{font-size:36px;line-height:1.35}
+.q-card.blue{background:var(--blue);border-color:var(--blue);color:#fff}
+.q-card.blue blockquote{color:#fff}
+.q-card.blue cite{color:#d3e3fa}
+.q-card cite{font-style:normal;font-size:20px;color:var(--ink-soft);display:flex;gap:10px;align-items:baseline}
+.q-card cite::before{content:"";width:22px;height:2px;background:var(--blue);flex:none;transform:translateY(-5px)}
+.q-card.blue cite::before{background:var(--sun)}
+.q-tag{display:inline-block;font-size:20px;font-weight:700;color:var(--blue);margin-bottom:12px}
+.q-card.blue .q-tag{color:var(--sun)}
+
+/* ---------- POWER ---------- */
+.power{padding:140px 0}
+.power-grid{display:grid;grid-template-columns:5fr 7fr;gap:80px}
+.sticky{position:sticky;top:120px;align-self:start}
+.essay{border-top:2px solid var(--ink);padding:40px 0 48px}
+.essay:last-child{padding-bottom:0}
+.essay .num{font-family:var(--serif);font-weight:900;font-size:22px;color:var(--blue);letter-spacing:.1em}
+.essay h3{margin:10px 0 18px;font-size:clamp(30px,3vw,40px)}
+.essay p{color:var(--ink-soft)}
+.essay .pull{font-family:var(--serif);font-weight:700;color:var(--ink);font-size:26px;line-height:1.55;border-left:4px solid var(--sun);padding:4px 0 4px 24px;margin:26px 0}
+.power-photo{margin:40px 0 0;border-radius:var(--r);overflow:hidden}
+.power-photo img{aspect-ratio:16/10;object-fit:cover;width:100%;height:auto}
+.power-photo figcaption,.cap{font-size:20px;color:var(--ink-soft);padding-top:12px}
+
+.fields{padding:0 0 140px}
+.fields-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:48px;flex-wrap:wrap}
+.field-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.field{padding:40px 36px 44px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .2s ease}
+.field:hover{background:var(--sky)}
+.field svg{width:44px;height:44px;stroke:var(--blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-bottom:22px}
+.field h3{font-size:28px;margin-bottom:10px}
+.field p{color:var(--ink-soft);margin:0}
+
+/* ---------- SUNFAR ---------- */
+.sunfar{background:var(--blue-night);color:#fff;padding:140px 0 0;overflow:hidden}
+.sunfar .eyebrow{color:var(--sun)}
+.sf-head{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:end}
+.sf-head h2 .y{color:var(--sun)}
+.sf-head .lead{color:#c9daf2}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:80px;border-top:1px solid rgba(255,255,255,.22)}
+.stat{padding:40px 28px 44px 32px;border-right:1px solid rgba(255,255,255,.18)}
+.stat:nth-child(2){padding-left:0}
+.stat:last-child{border-right:0}
+.stat.main{grid-column:1/-1;border-right:0;border-bottom:1px solid rgba(255,255,255,.18);padding-left:0;display:grid;grid-template-columns:auto 1fr;column-gap:40px;align-items:end}
+.stat.main .k{grid-column:1/-1}
+.stat.main .d{margin:0 0 14px}
+.stat .k{font-size:20px;color:#bcd2f0;margin-bottom:8px}
+.stat .v{font-family:var(--serif);font-weight:900;font-size:clamp(46px,4.6vw,72px);line-height:1.05;font-variant-numeric:tabular-nums;white-space:nowrap}
+.stat.main .v{font-size:clamp(60px,9vw,140px);color:var(--sun)}
+.stat .u{font-size:max(20px,.42em);font-weight:700;margin-left:6px}
+.stat .d{font-size:20px;color:#bcd2f0;margin-top:10px}
+.stats-note{font-size:20px;color:#9fb9df;padding:20px 0 0}
+
+.origin{display:grid;grid-template-columns:1fr 1fr;gap:80px;padding:130px 0;align-items:start}
+.origin .big-q{font-family:var(--serif);font-weight:900;font-size:clamp(38px,4.2vw,60px);line-height:1.2}
+.origin .big-q small{display:block;font-family:var(--sans);font-weight:500;font-size:20px;color:#bcd2f0;margin-top:24px;letter-spacing:.04em}
+.origin .story p{color:#dce7f7}
+.origin .story p strong{color:#fff}
+.origin .story .src{font-size:20px;color:#9fb9df}
+
+/* mechanism */
+.mech{background:#fff;color:var(--ink);border-radius:32px 32px 0 0;padding:110px 0 120px}
+.mech-head{max-width:820px;margin-bottom:64px}
+.mech .eyebrow,.tl-sec .eyebrow{color:var(--blue)}
+.mech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.m-card{border:1px solid var(--line);border-radius:22px;padding:40px 36px;background:var(--mist);display:flex;flex-direction:column}
+.m-card .n{font-family:var(--serif);font-weight:900;font-size:64px;color:var(--blue);line-height:1}
+.m-card h3{margin:18px 0 14px}
+.m-card p{color:var(--ink-soft);margin:0}
+.coins{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;max-width:300px;margin:28px 0 0}
+.coins span{aspect-ratio:1;border-radius:50%;background:#cfdcef}
+.coins span.on{background:var(--blue)}
+.coin-cap{font-size:20px;color:var(--ink-soft);margin-top:14px}
+.coin-cap b{color:var(--blue)}
+.refund{display:flex;align-items:center;gap:14px;margin-top:28px;font-family:var(--serif);font-weight:700;font-size:24px;flex-wrap:wrap}
+.refund .pill{background:#fff;border:2px solid var(--blue);color:var(--blue);border-radius:999px;padding:6px 18px}
+.refund .pill.fill{background:var(--blue);color:#fff}
+.shield{margin-top:28px;display:flex;gap:14px;align-items:center;font-size:20px;color:var(--ink)}
+.shield svg{width:52px;height:52px;flex:none;stroke:var(--blue);fill:none;stroke-width:1.8}
+
+/* timeline */
+.tl-sec{background:#fff;color:var(--ink);padding:0 0 140px}
+.tl-head{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap;margin-bottom:48px}
+.tl-hint{font-size:20px;color:var(--ink-soft)}
+.tl{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:20px;scrollbar-color:var(--blue) var(--sky)}
+.tl li{list-style:none;flex:0 0 340px;scroll-snap-align:start;padding:0 32px 0 0;position:relative}
+.tl li::before{content:"";display:block;height:3px;background:var(--line);margin:0 0 28px}
+.tl li::after{content:"";position:absolute;left:0;top:-7px;width:17px;height:17px;border-radius:50%;background:#fff;border:3px solid var(--blue)}
+.tl li.now::after{background:var(--sun);border-color:var(--ink)}
+.tl .y{font-family:var(--serif);font-weight:900;font-size:44px;color:var(--blue);line-height:1}
+.tl h3{font-size:26px;margin:14px 0 10px}
+.tl p{color:var(--ink-soft);margin:0}
+.tl ol{margin:0;padding:24px 0 0;display:contents}
+
+/* ---------- MEDIA ---------- */
+.media{background:var(--mist);padding:140px 0}
+.filters{display:flex;gap:12px;flex-wrap:wrap;margin:40px 0 44px}
+.filters button{font:500 20px/1 var(--sans);padding:14px 24px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;min-height:52px}
+.filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.m-item{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:32px 30px;text-decoration:none;display:flex;flex-direction:column;gap:14px;transition:transform .2s ease,border-color .2s ease}
+.m-item:hover{transform:translateY(-4px);border-color:var(--blue)}
+.m-item .meta{display:flex;justify-content:space-between;gap:12px;font-size:20px;color:var(--ink-soft)}
+.m-item .outlet{font-weight:700;color:var(--blue)}
+.m-item h3{font-size:25px;line-height:1.45}
+.m-item p{font-size:20px;color:var(--ink-soft);margin:0;flex:1}
+.m-item .go{font-weight:700;font-size:20px;color:var(--ink)}
+.m-item.feature{grid-column:span 2;background:var(--blue);border-color:var(--blue);color:#fff}
+.m-item.feature .outlet,.m-item.feature .meta{color:#d6e5fb}
+.m-item.feature h3{font-size:34px;color:#fff}
+.m-item.feature p,.m-item.feature .go{color:#e6eefa}
+.m-item[hidden]{display:none}
+
+/* ---------- PHOTOS ---------- */
+.photos{padding:140px 0}
+.ph-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:150px;gap:18px;margin-top:56px}
+.ph{margin:0;border-radius:16px;overflow:hidden;position:relative;background:var(--sky)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.ph:hover img{transform:scale(1.04)}
+.ph figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 22px 18px;background:linear-gradient(transparent,rgba(6,24,56,.85));color:#fff;font-size:20px;line-height:1.45}
+.ph1{grid-column:span 7;grid-row:span 4}.ph1 img{object-position:0% 50%}.ph2{grid-column:span 5;grid-row:span 2}.ph3{grid-column:span 5;grid-row:span 2}
+.ph4{grid-column:span 4;grid-row:span 2}.ph5{grid-column:span 4;grid-row:span 2}.ph6{grid-column:span 4;grid-row:span 2}
+.gfilters{display:flex;gap:12px;flex-wrap:wrap;margin:36px 0 36px}
+.gfilters button{font:500 20px/1 var(--sans);padding:14px 24px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;min-height:52px}
+.gfilters button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.gwall{columns:4 280px;column-gap:18px}
+.gi{break-inside:avoid;margin:0 0 18px;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.gi[hidden]{display:none}
+.gi button{display:block;width:100%;padding:0;border:0;background:var(--sky);cursor:zoom-in;overflow:hidden}
+.gi img{display:block;width:100%;height:auto;transition:transform .4s ease}
+.gi button:hover img{transform:scale(1.04)}
+.gi figcaption{padding:14px 18px 16px;font-size:20px;line-height:1.5;color:var(--ink)}
+.gi figcaption span{display:block;margin-top:6px;color:var(--blue);font-weight:700}
+.lb{position:fixed;inset:0;z-index:200;background:rgba(4,14,32,.97);display:grid;grid-template-columns:72px 1fr 72px;align-items:center}
+.lb[hidden]{display:none}
+.lb-fig{margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;height:100dvh;padding:64px 0 24px;min-width:0}
+.lb-fig img{width:auto;height:auto;max-width:100%;max-height:calc(100dvh - 210px);border-radius:8px}
+.lb-fig figcaption{color:#fff;font-size:20px;line-height:1.55;text-align:center;max-width:52em;margin-top:18px}
+.lb-meta{display:block;color:#b9cae6;margin-top:6px}
+.lb-meta a{color:var(--sun)}
+.lb-nav,.lb-x{background:rgba(255,255,255,.12);color:#fff;border:0;border-radius:999px;cursor:pointer;font:400 40px/1 var(--sans);width:60px;height:60px;justify-self:center}
+.lb-nav:hover,.lb-x:hover{background:rgba(255,255,255,.25)}
+.lb-x{position:absolute;top:16px;right:16px;font-size:28px;z-index:2}
+@media (max-width:700px){.lb{grid-template-columns:1fr}.lb-nav{position:absolute;bottom:18px;width:56px;height:56px}.lb-prev{left:18px}.lb-next{right:18px}.lb-fig{padding:70px 12px 90px}.lb-fig img{max-height:calc(100dvh - 300px)}}
+.ph-note{font-size:20px;color:var(--ink-soft);margin-top:22px}
+
+/* ---------- CLUB ---------- */
+.club{background:var(--sky);padding:140px 0}
+.club-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.club-img{border-radius:28px;overflow:hidden}
+.club-img img{aspect-ratio:4/3;object-fit:cover;width:100%;height:auto}
+.ways{margin-top:72px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.way{background:#fff;border-radius:22px;padding:40px 34px;border:1px solid var(--line)}
+.way .n{display:inline-grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--serif);font-weight:900;font-size:24px}
+.way h3{margin:20px 0 12px}
+.way p{color:var(--ink-soft);margin:0}
+
+.join{background:var(--blue);color:#fff;padding:130px 0;text-align:center;overflow:hidden}
+.join h2{font-size:clamp(46px,6.4vw,96px)}
+.join .lead{color:#dce8fa;margin:28px auto 44px}
+.join .ctas{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.seats{display:grid;grid-template-columns:repeat(20,1fr);gap:8px;max-width:900px;margin:0 auto 56px}
+.seats span{aspect-ratio:1;border-radius:6px;border:1.5px solid rgba(255,255,255,.45)}
+.seats span.on{background:#8fc0ff;border-color:#8fc0ff}
+.seats span.next{border:2.5px dashed var(--sun);animation:seatPulse 1.8s ease-in-out infinite}
+@keyframes seatPulse{50%{background:rgba(255,216,74,.35)}}
+@media (prefers-reduced-motion:reduce){.seats span.next{animation:none}}
+.seat-legend{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;font-size:20px;color:#dce8fa;margin:0 0 48px}
+.seat-legend b{display:inline-block;width:22px;height:22px;border-radius:5px;vertical-align:-4px;margin-right:8px}
+.nw{white-space:nowrap}
+.cta-t{line-height:1.35;text-align:center}
+.footprint{display:inline-flex;align-items:center;gap:14px;margin-top:40px;font:700 22px/1.4 var(--sans);color:#fff;text-decoration:none;border-bottom:2px solid var(--sun);padding:6px 2px}
+.footprint:hover .arrow{transform:translateX(4px)}
+.f-credit{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.f-credit strong{color:#fff}
+.seats span.first{background:var(--sun);border-color:var(--sun)}
+.seat-cap{font-size:20px;color:#dce8fa;margin:-36px 0 18px}
+
+footer{background:var(--ink);color:#c7d5ea;padding:80px 0 60px;font-size:20px}
+.f-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:56px}
+footer h4{font-family:var(--serif);color:#fff;font-size:24px;margin:0 0 16px}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin-bottom:8px}
+footer a{color:#e3ecf8;text-decoration-color:rgba(255,255,255,.35);text-underline-offset:5px}
+.f-bottom{border-top:1px solid rgba(255,255,255,.15);margin-top:56px;padding-top:28px;color:#9fb2cf}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1000px){
+  .q-head,.power-grid,.sf-head,.origin,.club-grid,.f-grid{grid-template-columns:1fr;gap:40px}
+  .sticky{position:static}
+  .stats{grid-template-columns:1fr}
+  .stat{padding:30px 0!important;border-right:0!important;border-bottom:1px solid rgba(255,255,255,.18)}
+  .stat.main{display:block}
+  .mech-grid,.ways,.media-grid{grid-template-columns:1fr}
+  .m-item.feature{grid-column:auto}
+  .field-grid{grid-template-columns:1fr 1fr}
+  .ph-grid{grid-template-columns:1fr 1fr;grid-auto-rows:220px}
+  .ph1,.ph2,.ph3,.ph4,.ph5,.ph6{grid-column:span 1;grid-row:span 1}
+  .ph1{grid-column:1/-1;grid-row:span 2}
+  .q-feature{grid-template-columns:1fr;padding:56px 36px;gap:0}
+  .q-mark{font-size:140px;line-height:.7}
+}
+@media (max-width:680px){
+  .wrap{padding:0 22px}
+  .nav ul li:not(.keep){display:none}
+  .brand .full{display:none}
+  .field-grid{grid-template-columns:1fr}
+  .ph-grid{grid-template-columns:1fr}
+  .ph1{grid-row:span 1}
+  .stats{grid-template-columns:1fr}
+  .stat{border-right:0!important;padding-left:0!important}
+  .seats{grid-template-columns:repeat(10,1fr)}
+  .quotes,.power,.media,.photos,.club,.sunfar{padding-top:100px}
+  .hero h1{font-size:46px}
+  .q-feature blockquote{font-size:44px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="真公益企業家俱樂部 回到頂端"><span class="seal" aria-hidden="true">真</span><span>真公益<span class="full">・企業家俱樂部</span></span></a>
+    <nav aria-label="主選單">
+      <ul>
+        <li class="opt"><a href="#quotes">公益金句</a></li>
+        <li class="opt"><a href="#power">公益的力量</a></li>
+        <li class="opt"><a href="#sunfar">順發示範</a></li>
+        <li class="opt"><a href="#media">媒體牆</a></li>
+        <li class="opt"><a href="#photos">照片牆</a></li>
+        <li class="keep"><a class="btn btn-sun" href="#join">加入俱樂部</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <img src="assets/hero.jpg" alt="清晨的稻田小路上，三個背著書包的孩子牽著手走向鄉間小學，頭頂是一大片藍天" width="1672" height="941" fetchpriority="high">
+  <div class="wrap">
+    <div class="eyebrow">真公益・企業家俱樂部　發起中</div>
+    <h1 id="hero-title">公益，<br><span class="brush">不必等到有錢<svg viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><path d="M4 26 C 90 14, 190 12, 396 18 L 394 30 C 250 26, 120 30, 6 36 Z" fill="#ffd84a"/></svg></span>。</h1>
+    <p class="lead">參與，就是公益。一次消費、一步路跑、一場分享，都能讓一個孩子安心坐進教室。我們邀請企業家，把好事變成一種經營方式——做得久，也做得真。</p>
+    <div class="ctas">
+      <a class="btn btn-sun" href="#join">成為首批 100 席 <span class="arrow" aria-hidden="true">→</span></a>
+      <a class="btn btn-ghost" href="#sunfar">看順發怎麼做了 17 年</a>
+    </div>
+    <div class="hero-foot">
+      <span>示範單位　<b>順發電腦</b></span>
+      <span>2010 年起　<b>承諾捐出淨利 20%</b></span>
+      <span>累積捐款　<b>3 億 3,016 萬元</b></span>
+    </div>
+  </div>
+</section>
+
+<div class="ribbon" aria-hidden="true">
+  <div class="ribbon-track">
+    <span>參與就是公益 <i>●</i></span><span>公益不一定要很花錢 <i>●</i></span><span>用消費改變世界 <i>●</i></span><span>一個人走得快，一群人走得遠 <i>●</i></span><span>勿以善小而不為 <i>●</i></span><span>公益，是有足跡的 <i>●</i></span><span>贈人玫瑰，手有餘香 <i>●</i></span><span>一起把好事做大 <i>●</i></span>
+    <span>參與就是公益 <i>●</i></span><span>公益不一定要很花錢 <i>●</i></span><span>用消費改變世界 <i>●</i></span><span>一個人走得快，一群人走得遠 <i>●</i></span><span>勿以善小而不為 <i>●</i></span><span>公益，是有足跡的 <i>●</i></span><span>贈人玫瑰，手有餘香 <i>●</i></span><span>一起把好事做大 <i>●</i></span>
+  </div>
+</div>
+
+<!-- QUOTES -->
+<section class="quotes" id="quotes" aria-labelledby="q-title">
+  <div class="wrap">
+    <div class="q-head">
+      <div>
+        <div class="eyebrow">公益金句</div>
+        <h2 id="q-title" style="margin-top:18px">讓人想立刻<br>動起來的 18 句話</h2>
+      </div>
+      <p class="lead">從古籍、宗教家、企業家到身邊的實踐者——我們把讀了會心頭一熱的話收在這裡。每一句都在說同一件事：善，不看金額，看你有沒有開始。</p>
+    </div>
+
+    <div class="q-feature">
+      <div class="q-mark" aria-hidden="true">“</div>
+      <div>
+        <blockquote>參與，就是公益。</blockquote>
+        <cite>真公益企業家俱樂部　核心信念</cite>
+      </div>
+    </div>
+
+    <div class="q-grid">
+      <figure class="q-card big"><span class="q-tag">給第一次參與的你</span><blockquote>公益不一定要很花錢，但一定要用心。</blockquote><cite>真公益核心信念</cite></figure>
+      <figure class="q-card"><blockquote>行善，不是有錢人的專利，而是有心人的權利。</blockquote><cite>證嚴法師《靜思語》</cite></figure>
+      <figure class="q-card blue"><span class="q-tag">順發的起點</span><blockquote>沒有人能決定自己的父母是誰。</blockquote><cite>順發電腦董事長 吳錦昌（遠見雜誌，2013）</cite></figure>
+      <figure class="q-card"><blockquote>我們無法做偉大的事，只能用偉大的愛做小事。</blockquote><cite>德蕾莎修女</cite></figure>
+      <figure class="q-card"><span class="q-tag">給企業家</span><blockquote>企業應該隨時都要貢獻社會，而不是等規模夠大、獲利夠多後才想到。</blockquote><cite>吳錦昌（遠見雜誌，2013）</cite></figure>
+      <figure class="q-card"><blockquote>勿以善小而不為，勿以惡小而為之。</blockquote><cite>劉備，《三國志》</cite></figure>
+      <figure class="q-card big"><blockquote>用消費，改變世界。</blockquote><cite>順發「消費做公益」理念</cite></figure>
+      <figure class="q-card"><blockquote>沒有人會因為付出而變得貧窮。</blockquote><cite>安妮・法蘭克</cite></figure>
+      <figure class="q-card"><blockquote>一個人走得快，一群人走得遠。</blockquote><cite>非洲諺語</cite></figure>
+      <figure class="q-card blue"><span class="q-tag">給企業家</span><blockquote>一家公司可以做公益，100 家公司可以改變世界。</blockquote><cite>吳錦昌，Run for Future 發起人</cite></figure>
+      <figure class="q-card"><blockquote>老吾老，以及人之老；幼吾幼，以及人之幼。</blockquote><cite>《孟子・梁惠王上》</cite></figure>
+      <figure class="q-card"><blockquote>公益，是有足跡的。</blockquote><cite>大樹教練，真公益發起人</cite></figure>
+      <figure class="q-card"><blockquote>贈人玫瑰，手有餘香。</blockquote><cite>俗諺</cite></figure>
+      <figure class="q-card big"><blockquote>不是各自做好事，而是一起把好事做大。</blockquote><cite>Run for Future 聯合公益理念</cite></figure>
+      <figure class="q-card"><blockquote>做就對了。</blockquote><cite>證嚴法師《靜思語》</cite></figure>
+      <figure class="q-card"><blockquote>施比受更有福。</blockquote><cite>《聖經・使徒行傳》</cite></figure>
+      <figure class="q-card"><blockquote>大道之行也，天下為公。</blockquote><cite>《禮記・禮運》</cite></figure>
+    </div>
+  </div>
+</section>
+
+<!-- POWER -->
+<section class="power" id="power" aria-labelledby="p-title">
+  <div class="wrap power-grid">
+    <div class="sticky">
+      <div class="eyebrow">公益的力量</div>
+      <h2 id="p-title" style="margin:18px 0 26px">一份善意，<br>會走到<br><span class="hl">很遠的地方</span>。</h2>
+      <p class="lead">公益不是「有餘力才做」的加分題。它是一個社會用來接住彼此的方式——對台灣、對弱勢的孩子、對做公益的企業自己，都是。</p>
+      <figure class="power-photo">
+        <img src="assets/photo-reading.jpg" alt="陽光灑進鄉間小學教室，孩子們圍著新繪本一起閱讀，志工老師蹲在一旁陪伴" width="1672" height="941" loading="lazy">
+        <figcaption>一本書、一個陪伴的大人，就能改變一個孩子對學習的感覺。</figcaption>
+      </figure>
+    </div>
+    <div>
+      <article class="essay">
+        <div class="num">01 ／ 對台灣社會</div>
+        <h3>公益，是社會的第二張安全網。</h3>
+        <p>政府的制度照顧得到大多數人，但總有縫隙：一場颱風、一次失業、一位家長生病，就足以讓一個家庭跌出原本的軌道。這時候，民間的善意往往比任何公文都更早抵達。</p>
+        <p>台灣人一向不吝於伸手——地震、風災、疫情來時，我們看過無數次「全民一起來」。公益讓這份溫度不只出現在災難時，而是成為日常的社會信任：相信陌生人會幫你，也願意去幫陌生人。</p>
+        <p class="pull">一個願意彼此照顧的社會，才是真正有競爭力的社會。</p>
+      </article>
+      <article class="essay">
+        <div class="num">02 ／ 對弱勢族群</div>
+        <h3>給的不只是錢，是尊嚴與「選擇」。</h3>
+        <p>對一個經濟弱勢家庭的孩子來說，一筆學費、一台電腦、一套學習帳號，差別不是「多一點資源」，而是「能不能留在教室裡」。孩子的人格與看待世界的方式，多半在小學畢業前就成形——在這個階段被接住，往往就改變了一輩子。</p>
+        <p class="pull">脫離貧窮世襲，就是讓孩子擁有「選擇」的機會。</p>
+        <p>好的公益，也守護受助者的尊嚴：不要求孩子曝光、不讓他們站上台領支票，而是讓資源安靜、透明地抵達需要的地方。</p>
+      </article>
+      <article class="essay">
+        <div class="num">03 ／ 對做公益的企業</div>
+        <h3>公益做久了，會長成企業的靈魂。</h3>
+        <p>產品可以被模仿，價格可以被競爭；但一家公司為這個世界做了什麼，是無法被複製的。員工從「只是一份工作」變成「我在幫助別人」，顧客從比價變成認同。</p>
+        <p>順發電腦的經驗是最好的證明：剛轉型時也曾被質疑「太天真」，幾年後《遠見》採訪時，已有逾九成員工表示認同，甚至有顧客不再比價，只因為認同這份公益。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="fields" aria-labelledby="f-title">
+  <div class="wrap">
+    <div class="fields-head">
+      <div>
+        <div class="eyebrow">不同領域的公益</div>
+        <h2 id="f-title" style="margin-top:18px">每個領域，<br>都有人在等一雙手。</h2>
+      </div>
+      <p class="lead" style="max-width:24em">不知道從哪裡開始？挑一個你最有感的領域，從一件小事做起。</p>
+    </div>
+    <div class="field-grid">
+      <div class="field"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 18 24 9l18 9-18 9z"/><path d="M13 22v10c3 3 7 4 11 4s8-1 11-4V22"/><path d="M42 18v12"/></svg><h3>教育平權</h3><p>助學金、課後輔導、閱讀資源，讓家境不再決定一個孩子能走多遠。</p></div>
+      <div class="field"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="10" width="34" height="22" rx="2"/><path d="M3 38h42M18 32l-2 6M30 32l2 6"/></svg><h3>縮短數位落差</h3><p>再生電腦、線上學習帳號、網路與設備，讓偏鄉孩子也能跟上數位時代。</p></div>
+      <div class="field"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 41s-15-8.6-15-20a8 8 0 0 1 15-4 8 8 0 0 1 15 4c0 11.4-15 20-15 20z"/></svg><h3>兒少照顧</h3><p>支持育幼院、寄養與團體家庭，讓失去依靠的孩子在關愛中長大。</p></div>
+      <div class="field"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="12" r="5"/><path d="M24 17v13M16 44l8-14 8 14M14 24h20"/></svg><h3>長者陪伴</h3><p>送餐、陪伴、共餐據點，讓獨居長輩不孤單，也讓照顧者能喘口氣。</p></div>
+      <div class="field"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="20" cy="9" r="4"/><path d="M20 13v12h11l5 12"/><path d="M27 31a10 10 0 1 1-12-10"/></svg><h3>身心障礙支持</h3><p>就業機會、輔具與無障礙環境，讓每個人都能用自己的方式參與社會。</p></div>
+      <div class="field"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4v6M24 38v6M8 24H4M44 24h-4"/><path d="M14 30c2-8 6-14 10-18 4 4 8 10 10 18"/><path d="M12 34h24"/></svg><h3>災難救助</h3><p>颱風、地震後的物資、重建與復學，善意總是最早抵達現場。</p></div>
+      <div class="field"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 42V22"/><path d="M24 26c-9 0-14-6-14-16 10 0 14 6 14 16zM24 22c0-8 5-13 14-13 0 9-5 13-14 13z"/></svg><h3>環境永續</h3><p>電子產品回收再生、減碳節能，照顧孩子的未來，也要照顧他們的地球。</p></div>
+      <div class="field"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="30" cy="8" r="4"/><path d="M14 22l8-7 8 5 5 7M22 15l-4 13 8 6v10M18 28l-8 8"/></svg><h3>運動與健康</h3><p>公益路跑、健走，讓流汗這件事同時也在幫助別人——運動，也能是公益。</p></div>
+      <div class="field"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 36V10l22-4v26"/><circle cx="13" cy="36" r="5"/><circle cx="35" cy="32" r="5"/></svg><h3>文化與藝術</h3><p>讓偏鄉孩子也能看一場表演、學一樣才藝，美感教育同樣是受教權。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SUNFAR -->
+<section class="sunfar" id="sunfar" aria-labelledby="s-title">
+  <div class="wrap">
+    <div class="sf-head">
+      <div>
+        <div class="eyebrow">示範單位・順發電腦</div>
+        <h2 id="s-title" style="margin-top:18px">一家 3C 賣場，<br>把公益做了 <span class="y">17 年</span>。</h2>
+      </div>
+      <p class="lead">2010 年，順發電腦宣布轉型為「公益型企業」，承諾每年捐出淨利的 20% 幫助弱勢學童。不靠一次性的大筆捐款，而是把公益寫進每一筆交易裡——讓顧客不多花一毛錢，就能一起做公益。</p>
+    </div>
+
+    <div class="stats" role="list">
+      <div class="stat main" role="listitem"><div class="k">累積捐款金額</div><div class="v"><span data-count="33016" data-fmt="yi">3億3,016</span><span class="u">萬元</span></div><div class="d">每一元，都來自顧客的日常消費</div></div>
+      <div class="stat" role="listitem"><div class="k">消費行善人次</div><div class="v"><span data-count="4624">4,624</span><span class="u">萬</span></div><div class="d">累計參與人次</div></div>
+      <div class="stat" role="listitem"><div class="k">受益學校</div><div class="v"><span data-count="1210">1,210</span><span class="u">所+</span></div><div class="d">全台中小學</div></div>
+      <div class="stat" role="listitem"><div class="k">受益學童</div><div class="v"><span data-count="350700">350,700</span><span class="u">人+</span></div><div class="d">就學支持與學習資源</div></div>
+    </div>
+    <p class="stats-note">17 年公益累積成果，數據由順發電腦提供，統計至 2026 年 9 月。</p>
+
+    <div class="origin">
+      <div class="big-q">「我不殺伯仁，<br>伯仁卻因我而死。」<small>— 吳錦昌談起轉型公益企業的起心動念（ETtoday，2015）</small></div>
+      <div class="story">
+        <p>順發電腦董事長<strong>吳錦昌</strong>，雲林出生、嘉義長大，父親是台電職員，下班後在家兼賣雛雞與飼料。他大學落榜、說話還有點結巴，卻靠著苦幹一路把順發做成「南部最大的電腦通路」，2012 年獲頒創業楷模。</p>
+        <p>轉折發生在某一天的報紙上：一則因失業缺錢、<strong>帶著孩子全家燒炭</strong>的新聞，讓他差點掉下眼淚。他意識到，科技進步讓上層的人更富裕，卻取代了許多基層的工作——而自己賣的電腦，正是推手之一。</p>
+        <p>「沒有人可以選擇自己的父母，生長在弱勢家庭的小孩，需要社會共同來照顧。」2010 年，他不顧股東、同業甚至家人的疑慮，宣布順發<strong>每年捐出淨利的 20%</strong>：其中 10% 由公司提撥、10% 由他個人捐出；就算當年虧損，也以每股盈餘一元的水準，至少捐出約 1,600 萬元，守住承諾。</p>
+        <p class="src">資料來源：ETtoday（2015/8/5）、遠見雜誌（2013/4/30）、華冠投顧專訪（2018/9/21）</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mech">
+    <div class="wrap">
+      <div class="mech-head">
+        <div class="eyebrow">順發模式</div>
+        <h2 style="margin-top:18px">三個設計，<br>讓公益可以<span class="hl">一直做下去</span>。</h2>
+      </div>
+      <div class="mech-grid">
+        <article class="m-card">
+          <div class="n">01</div>
+          <h3>消費做公益</h3>
+          <p>承諾捐出淨利的 20% 幫助弱勢學童。顧客在門市結帳的那一刻，就同時參與了一次公益。</p>
+          <div class="coins" aria-hidden="true"><span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <p class="coin-cap">每 100 元淨利，<b>20 元</b>交給孩子的未來。</p>
+        </article>
+        <article class="m-card">
+          <div class="n">02</div>
+          <h3>買貴退差價</h3>
+          <p>保證買貴退差價——做公益不需要顧客多付一毛錢。讓「行善」與「划算」不再是二選一。</p>
+          <div class="refund" aria-hidden="true"><span class="pill">一般價格</span><span>＝</span><span class="pill fill">同樣價格＋公益</span></div>
+          <p class="coin-cap" style="margin-top:18px">公益不一定要很花錢，這就是最好的示範。</p>
+        </article>
+        <article class="m-card">
+          <div class="n">03</div>
+          <h3>守護尊嚴與隱私</h3>
+          <p>捐款主要投入弱勢學童的就學支持與學習資源，透過透明、低管理成本的平台（如教育部學校教育儲蓄戶）直達需要的孩子。孩子不需曝光，而是親手寫一張感謝卡，把心意傳回給捐助者。</p>
+          <div class="shield"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4l16 6v12c0 10-7 18-16 22C15 40 8 32 8 22V10z"/><path d="M17 24l5 5 9-10"/></svg><span>幫助，不必用孩子的尊嚴來交換。</span></div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="tl-sec">
+    <div class="wrap">
+      <div class="tl-head">
+        <div>
+          <div class="eyebrow">公益足跡</div>
+          <h2 style="margin-top:18px">17 年，一步一步走出來。</h2>
+        </div>
+        <p class="tl-hint">← 左右滑動，看完整足跡 →</p>
+      </div>
+      <ol class="tl" tabindex="0" aria-label="順發公益時間軸">
+        <li><div class="y">2010</div><h3>轉型公益型企業</h3><p>宣布每年捐出淨利 20% 幫助弱勢兒童，門市制服印上「全民新主義・消費做公益」。</p></li>
+        <li><div class="y">2012</div><h3>選擇透明的平台</h3><p>以教育部學校教育儲蓄戶為主要捐款管道，讓善款盡可能直接用在孩子身上；吳錦昌獲頒第 35 屆創業楷模。</p></li>
+        <li><div class="y">2013</div><h3>遠見 CSR 首獎</h3><p>獲《遠見》第九屆企業社會責任「公益推廣組」首獎，也是當屆唯一獲獎的南部企業；三年捐款已逾 1 億元。</p></li>
+        <li><div class="y">2014</div><h3>20 for Future 聯盟</h3><p>成立「20 for Future 公益企業聯盟」，號召更多企業一起響應。</p></li>
+        <li><div class="y">2019</div><h3>首屆 Run for Future</h3><p>與高雄上市櫃企業家協會合辦公益路跑，結餘 98.6 萬元贊助高雄偏鄉 11 所學校孩童就學。</p></li>
+        <li><div class="y">2021–23</div><h3>疫情中學習不中斷</h3><p>與高雄市教育局合作，三年捐贈 1,200 組線上學習帳號，47 校次師生受惠，獲頒感謝狀。</p></li>
+        <li><div class="y">2023</div><h3>與慈濟「企業共善」</h3><p>簽約推動再生電腦專案，整修後無償送給弱勢學童，同時減少電子廢棄物。</p></li>
+        <li><div class="y">2025</div><h3>路跑規模創新高</h3><p>第四屆 Run for Future 吸引 20 國 5,464 名跑者，結餘 173 萬 8,328 元全數捐助高雄 17 個兒少照顧單位。</p></li>
+        <li class="now"><div class="y">2026</div><h3>3 億 3,016 萬元</h3><p>累積捐款突破 3.3 億元；第五屆 Run for Future 啟動，邀請 100 家企業共同發起。</p></li>
+        <li><div class="y">2027</div><h3>走向國際</h3><p>4 月 18 日，第五屆在高雄港灣文化廊帶起跑，目標 12,000 名跑者、25–30 個國家地區。</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIA -->
+<section class="media" id="media" aria-labelledby="m-title">
+  <div class="wrap">
+    <div class="eyebrow">媒體牆</div>
+    <h2 id="m-title" style="margin-top:18px">好事，被看見了。</h2>
+    <div class="filters" role="group" aria-label="篩選報導">
+      <button type="button" aria-pressed="true" data-f="all">全部</button>
+      <button type="button" aria-pressed="false" data-f="origin">起心動念</button>
+      <button type="button" aria-pressed="false" data-f="edu">助學與數位</button>
+      <button type="button" aria-pressed="false" data-f="run">公益路跑</button>
+    </div>
+    <div class="media-grid">
+      <a class="m-item feature" data-c="origin" href="https://www.gvm.com.tw/article/17907" target="_blank" rel="noopener">
+        <div class="meta"><span class="outlet">遠見雜誌</span><span>2013.04.30</span></div>
+        <h3>順發電腦 年捐 20% 盈餘，帶動千萬人消費行善</h3>
+        <p>獲《遠見》CSR 公益推廣組首獎：三年捐出逾 1 億元，幫助近 18 萬人次弱勢族群，帶動逾 1,300 萬人次消費行善。</p>
+        <span class="go">閱讀原文 →</span></a>
+      <a class="m-item" data-c="origin" href="https://www.ettoday.net/news/20150805/545446.htm" target="_blank" rel="noopener">
+        <div class="meta"><span class="outlet">ETtoday 新聞雲</span><span>2015.08.05</span></div>
+        <h3>順發電腦董事長吳錦昌 捐企業 20% 淨利幫助弱勢學童</h3>
+        <p>從殺價競爭的 3C 賣場強人，到一年捐出好幾千萬而不悔的公益企業家。</p>
+        <span class="go">閱讀原文 →</span></a>
+      <a class="m-item" data-c="origin" href="https://www.hwa-guan.com.tw/Wealth/ViewPoint/ArticleContent?C_id=5507" target="_blank" rel="noopener">
+        <div class="meta"><span class="outlet">華冠投顧</span><span>2018.09.21</span></div>
+        <h3>吳錦昌：用消費改變世界，20% 淨利做公益</h3>
+        <p>保證賣貴退差價，讓消費者不多花一毛錢就能做公益。</p>
+        <span class="go">閱讀原文 →</span></a>
+      <a class="m-item" data-c="run" href="https://www.chinatimes.com/realtimenews/20200121001516-260405" target="_blank" rel="noopener">
+        <div class="meta"><span class="outlet">中時新聞網</span><span>2020.01.21</span></div>
+        <h3>高雄大老闆都來了！「順發 x 港都路跑」用腳做公益</h3>
+        <p>首屆結餘 98.6 萬元，贊助高雄偏鄉 11 所學校；數十位企業家帶頭領跑。</p>
+        <span class="go">閱讀原文 →</span></a>
+      <a class="m-item" data-c="edu" href="https://www.storm.mg/article/4723024" target="_blank" rel="noopener">
+        <div class="meta"><span class="outlet">風傳媒</span><span>2023.02.08</span></div>
+        <h3>高市教育局頒感謝狀 表揚順發捐贈偏鄉弱勢學子線上學習帳號</h3>
+        <p>三年捐贈 1,200 組學習帳號，47 校次師生受惠。</p>
+        <span class="go">閱讀原文 →</span></a>
+      <a class="m-item" data-c="edu" href="https://www.tcnews.com.tw/news/item/20085.html" target="_blank" rel="noopener">
+        <div class="meta"><span class="outlet">慈善新聞網</span><span>2023.09.26</span></div>
+        <h3>慈濟、順發再生電腦合作 愛的循環給社會正能量</h3>
+        <p>順發門市回收整修的電腦，無償送到弱勢家庭學童手上。</p>
+        <span class="go">閱讀原文 →</span></a>
+      <a class="m-item" data-c="run" href="https://www.ctee.com.tw/news/20250723700201-439901" target="_blank" rel="noopener">
+        <div class="meta"><span class="outlet">工商時報</span><span>2025.07.23</span></div>
+        <h3>順發 × 港都公益路跑 捐助弱勢兒少</h3>
+        <p>第四屆結餘 173 萬 8,328 元全數捐出，幫助 17 個高雄兒少安置與照顧單位。</p>
+        <span class="go">閱讀原文 →</span></a>
+      <a class="m-item" data-c="origin" href="https://tw.stock.yahoo.com/news/%E9%A0%86%E7%99%BC3c-%E6%89%93%E9%80%A0%E5%85%AC%E7%9B%8A%E5%9E%8B%E9%9B%B6%E5%94%AE%E6%96%B0%E5%85%B8%E7%AF%84-201000585.html" target="_blank" rel="noopener">
+        <div class="meta"><span class="outlet">工商時報／Yahoo 股市</span><span>2025.06.04</span></div>
+        <h3>順發 3C 打造公益型零售新典範</h3>
+        <p>「讓科技更有溫度」——把公益與永續精神深植於經營核心。</p>
+        <span class="go">閱讀原文 →</span></a>
+      <a class="m-item" data-c="edu" href="https://www.tcnews.com.tw/news/item/28028.html" target="_blank" rel="noopener">
+        <div class="meta"><span class="outlet">慈善新聞網</span><span>2025.12.19</span></div>
+        <h3>歲末暖心行動 再生電腦一路往南送愛道感恩</h3>
+        <p>報導記載：順發消費行善人次已超過 4,510 萬，受益人數超過 349,400 人。</p>
+        <span class="go">閱讀原文 →</span></a>
+      <a class="m-item" data-c="run" href="https://www.ctee.com.tw/news/20260212700920-431208" target="_blank" rel="noopener">
+        <div class="meta"><span class="outlet">工商時報</span><span>2026.02.12</span></div>
+        <h3>第五屆「順發 × 港都公益路跑」蓄勢待發</h3>
+        <p>近 40 家指標單位共同發起，結餘款將全數投入高雄在地兒少照護與教育。</p>
+        <span class="go">閱讀原文 →</span></a>
+      <a class="m-item" data-c="run" href="https://formosa.ikh.tw/index.php?pn=vw&amp;id=i327ec32zv5l" target="_blank" rel="noopener">
+        <div class="meta"><span class="outlet">福爾摩沙時報</span><span>2026.10.05</span></div>
+        <h3>第五屆順發 × 港都公益路跑 2027 年 4 月 18 日登場</h3>
+        <p>「一個人跑，是完成自己的里程；一群人一起跑，可以讓一座城市產生力量。」</p>
+        <span class="go">閱讀原文 →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTOS -->
+<section class="photos" id="photos" aria-labelledby="ph-title">
+  <div class="wrap">
+    <div class="eyebrow">照片牆</div>
+    <h2 id="ph-title" style="margin-top:18px">這些畫面，<br>就是公益的樣子。</h2>
+    <p class="lead" style="margin-top:24px">從港都公益路跑、再生電腦送到孩子手上，到捐贈偏鄉學校——55 個順發公益現場，都來自公開的媒體報導。點任何一張，就能看完整大圖與原始報導。</p>
+    <div class="gfilters" role="group" aria-label="照片分類">
+      <button type="button" data-g="all" aria-pressed="true">全部 55</button>
+      <button type="button" data-g="run" aria-pressed="false">公益路跑 32</button>
+      <button type="button" data-g="pc" aria-pressed="false">再生電腦 13</button>
+      <button type="button" data-g="edu" aria-pressed="false">助學與捐贈 4</button>
+      <button type="button" data-g="buy" aria-pressed="false">消費做公益 6</button>
+    </div>
+    <div class="gwall" id="gwall">
+      <figure class="gi" data-c="run"><button type="button" data-i="0" aria-label="放大檢視：Run for Future 順發 × 港都公益路跑主視覺"><img src="assets/gallery/t/g00.jpg" width="720" height="367" alt="Run for Future 順發 × 港都公益路跑主視覺" loading="lazy" decoding="async"></button><figcaption>Run for Future 順發 × 港都公益路跑主視覺<span>Run for Future</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="1" aria-label="放大檢視：順發×港都公益路跑：跑者與啦啦隊在起終點拱門前合影"><img src="assets/gallery/t/g01.jpg" width="720" height="480" alt="順發×港都公益路跑：跑者與啦啦隊在起終點拱門前合影" loading="lazy" decoding="async"></button><figcaption>順發×港都公益路跑：跑者與啦啦隊在起終點拱門前合影<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="2" aria-label="放大檢視：2021 第一屆路跑：企業家領跑團衝出起跑線"><img src="assets/gallery/t/g02.jpg" width="720" height="470" alt="2021 第一屆路跑：企業家領跑團衝出起跑線" loading="lazy" decoding="async"></button><figcaption>2021 第一屆路跑：企業家領跑團衝出起跑線<span>PeoPo 公民新聞</span></figcaption></figure>
+      <figure class="gi" data-c="edu"><button type="button" data-i="3" aria-label="放大檢視：2021 路跑結餘 750,690 元，捐贈高雄偏鄉 12 所國中小教育經費"><img src="assets/gallery/t/g03.jpg" width="720" height="476" alt="2021 路跑結餘 750,690 元，捐贈高雄偏鄉 12 所國中小教育經費" loading="lazy" decoding="async"></button><figcaption>2021 路跑結餘 750,690 元，捐贈高雄偏鄉 12 所國中小教育經費<span>PeoPo 公民新聞</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="4" aria-label="放大檢視：第四屆路跑：數千名跑者在世運主場館前合影"><img src="assets/gallery/t/g04.jpg" width="720" height="480" alt="第四屆路跑：數千名跑者在世運主場館前合影" loading="lazy" decoding="async"></button><figcaption>第四屆路跑：數千名跑者在世運主場館前合影<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="5" aria-label="放大檢視：包括代言人兼總領跑人義大醫院院長杜元坤等40位企業領袖領跑人合影"><img src="assets/gallery/t/g05.jpg" width="720" height="480" alt="包括代言人兼總領跑人義大醫院院長杜元坤等40位企業領袖領跑人合影" loading="lazy" decoding="async"></button><figcaption>包括代言人兼總領跑人義大醫院院長杜元坤等40位企業領袖領跑人合影<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="6" aria-label="放大檢視：領跑人及所有參與路跑者在起跑線準備起跑"><img src="assets/gallery/t/g06.jpg" width="720" height="404" alt="領跑人及所有參與路跑者在起跑線準備起跑" loading="lazy" decoding="async"></button><figcaption>領跑人及所有參與路跑者在起跑線準備起跑<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="7" aria-label="放大檢視：在港都科技三三會會長鄭明智(右)、順發電腦董事長吳錦昌(左)的鳴槍下，跑者隨即以穩健步伐衝出起跑線，爭取最佳成績"><img src="assets/gallery/t/g07.jpg" width="720" height="405" alt="在港都科技三三會會長鄭明智(右)、順發電腦董事長吳錦昌(左)的鳴槍下，跑者隨即以穩健步伐衝出起跑線，爭取最佳成績" loading="lazy" decoding="async"></button><figcaption>在港都科技三三會會長鄭明智(右)、順發電腦董事長吳錦昌(左)的鳴槍下，跑者隨即以穩健步伐衝出起跑線，爭取最佳成績<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="8" aria-label="放大檢視：WingStars台鋼啦啦隊在起跑線上為跑者們加油打氣"><img src="assets/gallery/t/g08.jpg" width="720" height="405" alt="WingStars台鋼啦啦隊在起跑線上為跑者們加油打氣" loading="lazy" decoding="async"></button><figcaption>WingStars台鋼啦啦隊在起跑線上為跑者們加油打氣<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="9" aria-label="放大檢視：第四屆路跑：跑者在世運主場館起終點拱門前合影"><img src="assets/gallery/t/g09.jpg" width="720" height="404" alt="第四屆路跑：跑者在世運主場館起終點拱門前合影" loading="lazy" decoding="async"></button><figcaption>第四屆路跑：跑者在世運主場館起終點拱門前合影<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="10" aria-label="放大檢視：第四屆「順發X港都公益路跑」再度邀您熱情響應，將愛心化為實際行動為下一代跑出新未來！"><img src="assets/gallery/t/g10.jpg" width="720" height="473" alt="第四屆「順發X港都公益路跑」再度邀您熱情響應，將愛心化為實際行動為下一代跑出新未來！" loading="lazy" decoding="async"></button><figcaption>第四屆「順發X港都公益路跑」再度邀您熱情響應，將愛心化為實際行動為下一代跑出新未來！<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="11" aria-label="放大檢視：主辦單位代表合影，左起：港都科技三三會2025年會長鄭明智(台郡科技董事長)、2023年會長邢家蓁(進泰電子董事長)、2024年會長李孔文(大田精密董事長)及順發電腦董事長吳錦昌"><img src="assets/gallery/t/g11.jpg" width="720" height="454" alt="主辦單位代表合影，左起：港都科技三三會2025年會長鄭明智(台郡科技董事長)、2023年會長邢家蓁(進泰電子董事長)、2024年會長李孔文(大田精密董事長)及順發電腦董事長吳錦昌" loading="lazy" decoding="async"></button><figcaption>主辦單位代表合影，左起：港都科技三三會2025年會長鄭明智(台郡科技董事長)、2023年會長邢家蓁(進泰電子董事長)、2024年會長李孔文(大田精密董事長)及順發電腦董事長吳錦昌<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="12" aria-label="放大檢視：企業家手持第四屆路跑看板，號召各界一起參與"><img src="assets/gallery/t/g12.jpg" width="720" height="540" alt="企業家手持第四屆路跑看板，號召各界一起參與" loading="lazy" decoding="async"></button><figcaption>企業家手持第四屆路跑看板，號召各界一起參與<span>中時新聞網</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="13" aria-label="放大檢視：醫界與企業共同響應：第四屆路跑代言合影"><img src="assets/gallery/t/g13.jpg" width="720" height="541" alt="醫界與企業共同響應：第四屆路跑代言合影" loading="lazy" decoding="async"></button><figcaption>醫界與企業共同響應：第四屆路跑代言合影<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="14" aria-label="放大檢視：順發高舉第四屆路跑贊助企業看板"><img src="assets/gallery/t/g14.jpg" width="720" height="658" alt="順發高舉第四屆路跑贊助企業看板" loading="lazy" decoding="async"></button><figcaption>順發高舉第四屆路跑贊助企業看板<span>中時新聞網</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="15" aria-label="放大檢視：路跑結餘捐助高雄弱勢兒少"><img src="assets/gallery/t/g15.jpg" width="720" height="404" alt="路跑結餘捐助高雄弱勢兒少" loading="lazy" decoding="async"></button><figcaption>路跑結餘捐助高雄弱勢兒少<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="16" aria-label="放大檢視：第三屆路跑：企業家領跑隊伍準備出發"><img src="assets/gallery/t/g16.jpg" width="720" height="477" alt="第三屆路跑：企業家領跑隊伍準備出發" loading="lazy" decoding="async"></button><figcaption>第三屆路跑：企業家領跑隊伍準備出發<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="17" aria-label="放大檢視：本屆路跑參與人數破4千人"><img src="assets/gallery/t/g17.jpg" width="720" height="448" alt="本屆路跑參與人數破4千人" loading="lazy" decoding="async"></button><figcaption>本屆路跑參與人數破4千人<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="18" aria-label="放大檢視：順發電腦董事長吳錦昌(右三)頒獎並與獲獎者合影"><img src="assets/gallery/t/g18.jpg" width="720" height="404" alt="順發電腦董事長吳錦昌(右三)頒獎並與獲獎者合影" loading="lazy" decoding="async"></button><figcaption>順發電腦董事長吳錦昌(右三)頒獎並與獲獎者合影<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="19" aria-label="放大檢視：港都科技三三會會長張紋祥(右四)頒獎"><img src="assets/gallery/t/g19.jpg" width="720" height="404" alt="港都科技三三會會長張紋祥(右四)頒獎" loading="lazy" decoding="async"></button><figcaption>港都科技三三會會長張紋祥(右四)頒獎<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="20" aria-label="放大檢視：第三屆路跑代言合影：為了下一代，跑出新未來"><img src="assets/gallery/t/g20.jpg" width="541" height="720" alt="第三屆路跑代言合影：為了下一代，跑出新未來" loading="lazy" decoding="async"></button><figcaption>第三屆路跑代言合影：為了下一代，跑出新未來<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="21" aria-label="放大檢視：第二屆路跑：數十位企業家共同領跑"><img src="assets/gallery/t/g21.jpg" width="720" height="382" alt="第二屆路跑：數十位企業家共同領跑" loading="lazy" decoding="async"></button><figcaption>第二屆路跑：數十位企業家共同領跑<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="22" aria-label="放大檢視：高雄市政府運動發展局局長侯尊堯鳴槍後，3,500位跑者奮力向前"><img src="assets/gallery/t/g22.jpg" width="720" height="404" alt="高雄市政府運動發展局局長侯尊堯鳴槍後，3,500位跑者奮力向前" loading="lazy" decoding="async"></button><figcaption>高雄市政府運動發展局局長侯尊堯鳴槍後，3,500位跑者奮力向前<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="23" aria-label="放大檢視：順發 3C 董事長吳錦昌(右)及港都會會長盧鏡來(左)為選手加油打氣"><img src="assets/gallery/t/g23.jpg" width="720" height="418" alt="順發 3C 董事長吳錦昌(右)及港都會會長盧鏡來(左)為選手加油打氣" loading="lazy" decoding="async"></button><figcaption>順發 3C 董事長吳錦昌(右)及港都會會長盧鏡來(左)為選手加油打氣<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="24" aria-label="放大檢視：第二屆路跑：企業家領跑團齊聲加油"><img src="assets/gallery/t/g24.jpg" width="720" height="480" alt="第二屆路跑：企業家領跑團齊聲加油" loading="lazy" decoding="async"></button><figcaption>第二屆路跑：企業家領跑團齊聲加油<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="25" aria-label="放大檢視：首屆Run for Future公益路跑獲得民眾熱烈回響及高度肯定"><img src="assets/gallery/t/g25.jpg" width="720" height="479" alt="首屆Run for Future公益路跑獲得民眾熱烈回響及高度肯定" loading="lazy" decoding="async"></button><figcaption>首屆Run for Future公益路跑獲得民眾熱烈回響及高度肯定<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="26" aria-label="放大檢視：高雄大老闆都來了：用腳做公益"><img src="assets/gallery/t/g26.jpg" width="720" height="480" alt="高雄大老闆都來了：用腳做公益" loading="lazy" decoding="async"></button><figcaption>高雄大老闆都來了：用腳做公益<span>中時新聞網</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="27" aria-label="放大檢視：順發電腦與高雄港都上市櫃企業家協會合辦「Run For Future順發x港都公益路跑」，去年首屆盈餘近百萬幫助偏鄉學童。（吳錦發提供／林宏聰高雄傳真）"><img src="assets/gallery/t/g27.jpg" width="720" height="480" alt="順發電腦與高雄港都上市櫃企業家協會合辦「Run For Future順發x港都公益路跑」，去年首屆盈餘近百萬幫助偏鄉學童。（吳錦發提供／林宏聰高雄傳真）" loading="lazy" decoding="async"></button><figcaption>順發電腦與高雄港都上市櫃企業家協會合辦「Run For Future順發x港都公益路跑」，去年首屆盈餘近百萬幫助偏鄉學童。（吳錦發提供／林宏聰高雄傳真）<span>中時新聞網</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="28" aria-label="放大檢視：第一屆路跑：跑者湧出起跑拱門"><img src="assets/gallery/t/g28.jpg" width="720" height="480" alt="第一屆路跑：跑者湧出起跑拱門" loading="lazy" decoding="async"></button><figcaption>第一屆路跑：跑者湧出起跑拱門<span>中時新聞網</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="29" aria-label="放大檢視：路跑結餘幫助偏鄉學子：選手起跑前集合"><img src="assets/gallery/t/g29.jpg" width="597" height="396" alt="路跑結餘幫助偏鄉學子：選手起跑前集合" loading="lazy" decoding="async"></button><figcaption>路跑結餘幫助偏鄉學子：選手起跑前集合<span>運動筆記</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="30" aria-label="放大檢視：第五屆路跑完賽獎牌：收藏一座城市的感動"><img src="assets/gallery/t/g30.jpg" width="590" height="492" alt="第五屆路跑完賽獎牌：收藏一座城市的感動" loading="lazy" decoding="async"></button><figcaption>第五屆路跑完賽獎牌：收藏一座城市的感動<span>福爾摩沙時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="31" aria-label="放大檢視：第五屆路跑：參與企業的六大具體效益"><img src="assets/gallery/t/g31.jpg" width="480" height="720" alt="第五屆路跑：參與企業的六大具體效益" loading="lazy" decoding="async"></button><figcaption>第五屆路跑：參與企業的六大具體效益<span>福爾摩沙時報</span></figcaption></figure>
+      <figure class="gi" data-c="run"><button type="button" data-i="32" aria-label="放大檢視：第五屆路跑：2027年4月18日高雄港灣文化廊帶開跑"><img src="assets/gallery/t/g32.jpg" width="720" height="404" alt="第五屆路跑：2027年4月18日高雄港灣文化廊帶開跑" loading="lazy" decoding="async"></button><figcaption>第五屆路跑：2027年4月18日高雄港灣文化廊帶開跑<span>福爾摩沙時報</span></figcaption></figure>
+      <figure class="gi" data-c="pc"><button type="button" data-i="33" aria-label="放大檢視：順發與慈濟簽約，啟動再生電腦企業共善"><img src="assets/gallery/t/g33.jpg" width="720" height="402" alt="順發與慈濟簽約，啟動再生電腦企業共善" loading="lazy" decoding="async"></button><figcaption>順發與慈濟簽約，啟動再生電腦企業共善<span>慈善新聞網</span></figcaption></figure>
+      <figure class="gi" data-c="pc"><button type="button" data-i="34" aria-label="放大檢視：順發×慈濟企業共善簽約儀式全體合影"><img src="assets/gallery/t/g34.jpg" width="720" height="479" alt="順發×慈濟企業共善簽約儀式全體合影" loading="lazy" decoding="async"></button><figcaption>順發×慈濟企業共善簽約儀式全體合影<span>工商時報</span></figcaption></figure>
+      <figure class="gi" data-c="pc"><button type="button" data-i="35" aria-label="放大檢視：由順發捐贈物品經慈濟再生電腦團隊整修後，無償贈送給弱勢家庭學童以及其他社會福利機構使用"><img src="assets/gallery/t/g35.jpg" width="720" height="435" alt="由順發捐贈物品經慈濟再生電腦團隊整修後，無償贈送給弱勢家庭學童以及其他社會福利機構使用" loading="lazy" decoding="async"></button><figcaption>由順發捐贈物品經慈濟再生電腦團隊整修後，無償贈送給弱勢家庭學童以及其他社會福利機構使用<span>慈善新聞網</span></figcaption></figure>
+      <figure class="gi" data-c="pc"><button type="button" data-i="36" aria-label="放大檢視：慈濟新竹再生電腦團隊，專案自2021年開展，截至2023年9月21日，總計已送出594部電腦至全台及澎湖共15縣市"><img src="assets/gallery/t/g36.jpg" width="720" height="412" alt="慈濟新竹再生電腦團隊，專案自2021年開展，截至2023年9月21日，總計已送出594部電腦至全台及澎湖共15縣市" loading="lazy" decoding="async"></button><figcaption>慈濟新竹再生電腦團隊，專案自2021年開展，截至2023年9月21日，總計已送出594部電腦至全台及澎湖共15縣市<span>慈善新聞網</span></figcaption></figure>
+      <figure class="gi" data-c="pc"><button type="button" data-i="37" aria-label="放大檢視：慈濟基金會慈發處陳志明高專分享雙方合作的方向與內容"><img src="assets/gallery/t/g37.jpg" width="720" height="401" alt="慈濟基金會慈發處陳志明高專分享雙方合作的方向與內容" loading="lazy" decoding="async"></button><figcaption>慈濟基金會慈發處陳志明高專分享雙方合作的方向與內容<span>慈善新聞網</span></figcaption></figure>
+      <figure class="gi" data-c="pc"><button type="button" data-i="38" aria-label="放大檢視：志工為孩子安裝整修好的再生電腦"><img src="assets/gallery/t/g38.jpg" width="720" height="437" alt="志工為孩子安裝整修好的再生電腦" loading="lazy" decoding="async"></button><figcaption>志工為孩子安裝整修好的再生電腦<span>慈善新聞網</span></figcaption></figure>
+      <figure class="gi" data-c="pc"><button type="button" data-i="39" aria-label="放大檢視：志工把再生電腦一台台送到需要的家庭"><img src="assets/gallery/t/g39.jpg" width="720" height="540" alt="志工把再生電腦一台台送到需要的家庭" loading="lazy" decoding="async"></button><figcaption>志工把再生電腦一台台送到需要的家庭<span>慈善新聞網</span></figcaption></figure>
+      <figure class="gi" data-c="pc"><button type="button" data-i="40" aria-label="放大檢視：慈濟再生電腦服務推動成果發表"><img src="assets/gallery/t/g40.jpg" width="720" height="480" alt="慈濟再生電腦服務推動成果發表" loading="lazy" decoding="async"></button><figcaption>慈濟再生電腦服務推動成果發表<span>慈善新聞網</span></figcaption></figure>
+      <figure class="gi" data-c="pc"><button type="button" data-i="41" aria-label="放大檢視：再生電腦合作夥伴頒發ESG感謝狀"><img src="assets/gallery/t/g41.jpg" width="720" height="405" alt="再生電腦合作夥伴頒發ESG感謝狀" loading="lazy" decoding="async"></button><figcaption>再生電腦合作夥伴頒發ESG感謝狀<span>慈善新聞網</span></figcaption></figure>
+      <figure class="gi" data-c="pc"><button type="button" data-i="42" aria-label="放大檢視：歲末暖心行動：志工把再生電腦送進弱勢家庭"><img src="assets/gallery/t/g42.jpg" width="720" height="480" alt="歲末暖心行動：志工把再生電腦送進弱勢家庭" loading="lazy" decoding="async"></button><figcaption>歲末暖心行動：志工把再生電腦送進弱勢家庭<span>慈善新聞網</span></figcaption></figure>
+      <figure class="gi" data-c="pc"><button type="button" data-i="43" aria-label="放大檢視：歲末暖心行動：為受贈家庭現場設定電腦"><img src="assets/gallery/t/g43.jpg" width="720" height="480" alt="歲末暖心行動：為受贈家庭現場設定電腦" loading="lazy" decoding="async"></button><figcaption>歲末暖心行動：為受贈家庭現場設定電腦<span>慈善新聞網</span></figcaption></figure>
+      <figure class="gi" data-c="pc"><button type="button" data-i="44" aria-label="放大檢視：歲末暖心行動：受贈機構與志工合影"><img src="assets/gallery/t/g44.jpg" width="720" height="480" alt="歲末暖心行動：受贈機構與志工合影" loading="lazy" decoding="async"></button><figcaption>歲末暖心行動：受贈機構與志工合影<span>慈善新聞網</span></figcaption></figure>
+      <figure class="gi" data-c="pc"><button type="button" data-i="45" aria-label="放大檢視：歲末暖心行動：再生電腦一路往南送愛"><img src="assets/gallery/t/g45.jpg" width="720" height="480" alt="歲末暖心行動：再生電腦一路往南送愛" loading="lazy" decoding="async"></button><figcaption>歲末暖心行動：再生電腦一路往南送愛<span>慈善新聞網</span></figcaption></figure>
+      <figure class="gi" data-c="edu"><button type="button" data-i="46" aria-label="放大檢視：高雄市教育局頒感謝狀，表揚順發捐贈偏鄉與弱勢學子線上學習帳號"><img src="assets/gallery/t/g46.jpg" width="720" height="405" alt="高雄市教育局頒感謝狀，表揚順發捐贈偏鄉與弱勢學子線上學習帳號" loading="lazy" decoding="async"></button><figcaption>高雄市教育局頒感謝狀，表揚順發捐贈偏鄉與弱勢學子線上學習帳號<span>風傳媒</span></figcaption></figure>
+      <figure class="gi" data-c="edu"><button type="button" data-i="47" aria-label="放大檢視：被幫助的孩子，也有自己的故事"><img src="assets/gallery/t/g47.jpg" width="600" height="311" alt="被幫助的孩子，也有自己的故事" loading="lazy" decoding="async"></button><figcaption>被幫助的孩子，也有自己的故事<span>ETtoday</span></figcaption></figure>
+      <figure class="gi" data-c="edu"><button type="button" data-i="48" aria-label="放大檢視：受助學童的笑容，是公益最好的回報"><img src="assets/gallery/t/g48.jpg" width="600" height="302" alt="受助學童的笑容，是公益最好的回報" loading="lazy" decoding="async"></button><figcaption>受助學童的笑容，是公益最好的回報<span>ETtoday</span></figcaption></figure>
+      <figure class="gi" data-c="buy"><button type="button" data-i="49" aria-label="放大檢視：順發與合作夥伴攜手推動社會幸福、消費共創"><img src="assets/gallery/t/g49.jpg" width="720" height="509" alt="順發與合作夥伴攜手推動社會幸福、消費共創" loading="lazy" decoding="async"></button><figcaption>順發與合作夥伴攜手推動社會幸福、消費共創<span>Yahoo新聞</span></figcaption></figure>
+      <figure class="gi" data-c="buy"><button type="button" data-i="50" aria-label="放大檢視：選擇順發，關懷台灣：吳錦昌董事長"><img src="assets/gallery/t/g50.jpg" width="720" height="405" alt="選擇順發，關懷台灣：吳錦昌董事長" loading="lazy" decoding="async"></button><figcaption>選擇順發，關懷台灣：吳錦昌董事長<span>ETtoday</span></figcaption></figure>
+      <figure class="gi" data-c="buy"><button type="button" data-i="51" aria-label="放大檢視：花一樣的錢，讓順發替你回饋社會"><img src="assets/gallery/t/g51.jpg" width="600" height="338" alt="花一樣的錢，讓順發替你回饋社會" loading="lazy" decoding="async"></button><figcaption>花一樣的錢，讓順發替你回饋社會<span>ETtoday</span></figcaption></figure>
+      <figure class="gi" data-c="buy"><button type="button" data-i="52" aria-label="放大檢視：吳錦昌董事長：每年捐出20%淨利幫助弱勢學童"><img src="assets/gallery/t/g52.jpg" width="600" height="366" alt="吳錦昌董事長：每年捐出20%淨利幫助弱勢學童" loading="lazy" decoding="async"></button><figcaption>吳錦昌董事長：每年捐出20%淨利幫助弱勢學童<span>ETtoday</span></figcaption></figure>
+      <figure class="gi" data-c="buy"><button type="button" data-i="53" aria-label="放大檢視：20 for future：每一筆消費都在做公益"><img src="assets/gallery/t/g53.jpg" width="600" height="338" alt="20 for future：每一筆消費都在做公益" loading="lazy" decoding="async"></button><figcaption>20 for future：每一筆消費都在做公益<span>ETtoday</span></figcaption></figure>
+      <figure class="gi" data-c="buy"><button type="button" data-i="54" aria-label="放大檢視：每年捐20%盈餘，帶動千萬人消費行善"><img src="assets/gallery/t/g54.jpg" width="720" height="505" alt="每年捐20%盈餘，帶動千萬人消費行善" loading="lazy" decoding="async"></button><figcaption>每年捐20%盈餘，帶動千萬人消費行善<span>遠見雜誌</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="照片完整檢視" hidden>
+  <button type="button" class="lb-x" aria-label="關閉">✕</button>
+  <button type="button" class="lb-nav lb-prev" aria-label="上一張">‹</button>
+  <figure class="lb-fig"><img id="lb-img" alt=""><figcaption><span id="lb-cap"></span><span class="lb-meta"><span id="lb-n"></span>・<a id="lb-src" target="_blank" rel="noopener"></a>・<a id="lb-full" target="_blank" rel="noopener">開啟原始尺寸</a></span></figcaption></figure>
+  <button type="button" class="lb-nav lb-next" aria-label="下一張">›</button>
+</div>
+
+<!-- CLUB -->
+<section class="club" id="club" aria-labelledby="c-title">
+  <div class="wrap">
+    <div class="club-grid">
+      <div>
+        <div class="eyebrow">真公益・企業家俱樂部</div>
+        <h2 id="c-title" style="margin:18px 0 26px">把好事，<br>做成一種<br><span class="hl">經營方式</span>。</h2>
+        <p class="lead">順發證明了一件事：公益不必等到公司夠大、獲利夠多才開始，也不一定要花大錢。真公益企業家俱樂部，就是要把這樣的經驗分享出去——讓更多企業家找到適合自己的公益模式，並且一起走、走得遠。</p>
+      </div>
+      <div class="club-img"><img src="assets/photo-club.jpg" alt="一群企業家圍坐在明亮的白色會議室裡交流，窗外是藍天" width="1672" height="941" loading="lazy"></div>
+    </div>
+    <div class="ways">
+      <article class="way"><span class="n">01</span><h3>找到你的公益模式</h3><p>從順發的「消費做公益」出發，交流各行各業可以怎麼把公益寫進產品、服務與日常營運。</p></article>
+      <article class="way"><span class="n">02</span><h3>一起把好事做大</h3><p>聯合公益，而不是各自努力：從 Run for Future 的 100 家共同發起，到每一次共同行動。</p></article>
+      <article class="way"><span class="n">03</span><h3>讓公益被看見</h3><p>公益是有足跡的。我們為每一位成員記錄、整理、傳播他的公益足跡，讓善意帶動更多善意。</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="join" id="join" aria-labelledby="j-title">
+  <div class="wrap">
+    <div class="seats" id="seats" aria-hidden="true"></div>
+    <p class="seat-cap">首批 100 席・已有 50 席加入。黃色那一格是順發；下一格，可以是你。</p>
+    <p class="seat-legend"><span><b style="background:var(--sun)"></b>第 1 席・順發</span><span><b style="background:#8fc0ff"></b>已加入 50 席</span><span><b style="border:2.5px dashed var(--sun)"></b>下一席・你</span></p>
+    <h2 id="j-title">參與，就是公益。</h2>
+    <p class="lead">不用等到準備好，不用一次做很多。只要願意開始，你就已經是真公益的一份子。</p>
+    <div class="ctas">
+      <a class="btn btn-sun" href="https://event.bymyway.com/curated/rongtree/" target="_blank" rel="noopener">榮樹下談公益 <span class="arrow" aria-hidden="true">→</span></a>
+      <a class="btn btn-ghost" href="https://event.bymyway.com/curated/runforfuture/#join" target="_blank" rel="noopener">認領 Run for Future 席次</a>
+    </div>
+    <a class="footprint" href="https://event.bymyway.com/curated/social-good/" target="_blank" rel="noopener">我的真公益發起人足跡 <span class="arrow" aria-hidden="true">→</span></a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <h4>真公益・企業家俱樂部</h4>
+        <p>公益不一定要很花錢，參與就是公益。<br>發起人：大樹教練</p>
+      </div>
+      <div>
+        <h4>延伸閱讀</h4>
+        <ul>
+          <li><a href="https://event.bymyway.com/curated/social-good/" target="_blank" rel="noopener">真公益・發起人足跡</a></li>
+          <li><a href="https://event.bymyway.com/curated/runforfuture/" target="_blank" rel="noopener">Run for Future 2027</a></li>
+          <li><a href="#media">順發公益媒體報導</a></li>
+          <li><a href="https://event.bymyway.com/curated/rongtree/" target="_blank" rel="noopener">榮樹下</a></li>
+          <li><a href="https://player.soundon.fm/p/01bac58b-741f-4cbc-8fa6-58dd45f24923" target="_blank" rel="noopener">榮樹下 Podcast</a></li>
+          <li><a href="https://lin.ee/OkaMlzx" target="_blank" rel="noopener">榮樹下 LINE 官方帳號</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>資料說明</h4>
+        <p>順發 17 年累積成果由順發電腦提供，統計至 2026 年 9 月；其餘事蹟引自本頁媒體牆所列報導。</p>
+      </div>
+    </div>
+    <div class="f-bottom f-credit"><span>© 2026 真公益企業家俱樂部</span><span><strong>TAVA AI 設計</strong>・<a href="https://player.soundon.fm/p/01bac58b-741f-4cbc-8fa6-58dd45f24923" target="_blank" rel="noopener">榮樹下 Podcast</a>・<a href="https://lin.ee/OkaMlzx" target="_blank" rel="noopener">榮樹下 LINE</a></span></div>
+  </div>
+</footer>
+
+<script>
+// nav solid on scroll
+const nav=document.getElementById('nav');
+const onScroll=()=>nav.classList.toggle('solid',scrollY>window.innerHeight*0.6);
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// seats
+const seats=document.getElementById('seats');
+for(let i=0;i<100;i++){const s=document.createElement('span');s.className=i===0?'first':i<50?'on':i===50?'next':'';seats.appendChild(s);}
+
+// counters
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fmt=(n,mode)=>{
+  if(mode==='yi'){const yi=Math.floor(n/10000),wan=n%10000;return yi>0?`${yi}億${wan.toLocaleString('en-US')}`:wan.toLocaleString('en-US');}
+  return n.toLocaleString('en-US');
+};
+if(!reduce&&'IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting)return; io.unobserve(e.target);
+    const el=e.target,end=+el.dataset.count,mode=el.dataset.fmt,t0=performance.now(),dur=1600;
+    const step=t=>{const p=Math.min(1,(t-t0)/dur),v=Math.round(end*(1-Math.pow(1-p,3)));el.textContent=fmt(v,mode);if(p<1)requestAnimationFrame(step)};
+    requestAnimationFrame(step);
+  }),{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(el=>io.observe(el));
+}
+
+// media filter
+const btns=document.querySelectorAll('.filters button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  btns.forEach(x=>x.setAttribute('aria-pressed',x===b));
+  const f=b.dataset.f;
+  document.querySelectorAll('.m-item').forEach(m=>m.hidden=!(f==='all'||m.dataset.c===f));
+}));
+
+// gallery + lightbox
+const G=[{"src": "assets/full/g00.jpg", "w": 1800, "h": 918, "cap": "Run for Future 順發 × 港都公益路跑主視覺", "s": "Run for Future", "u": "https://event.bymyway.com/curated/runforfuture/"}, {"src": "assets/full/g01.jpg", "w": 1024, "h": 682, "cap": "順發×港都公益路跑：跑者與啦啦隊在起終點拱門前合影", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20260212700920-431208"}, {"src": "assets/full/g02.jpg", "w": 961, "h": 627, "cap": "2021 第一屆路跑：企業家領跑團衝出起跑線", "s": "PeoPo 公民新聞", "u": "https://www.peopo.org/news/622661"}, {"src": "assets/full/g03.jpg", "w": 958, "h": 634, "cap": "2021 路跑結餘 750,690 元，捐贈高雄偏鄉 12 所國中小教育經費", "s": "PeoPo 公民新聞", "u": "https://www.peopo.org/news/622661"}, {"src": "assets/full/g04.jpg", "w": 1024, "h": 683, "cap": "第四屆路跑：數千名跑者在世運主場館前合影", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20250420700393-431208"}, {"src": "assets/full/g05.jpg", "w": 1024, "h": 682, "cap": "包括代言人兼總領跑人義大醫院院長杜元坤等40位企業領袖領跑人合影", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20250420700393-431208"}, {"src": "assets/full/g06.jpg", "w": 1024, "h": 575, "cap": "領跑人及所有參與路跑者在起跑線準備起跑", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20250420700393-431208"}, {"src": "assets/full/g07.jpg", "w": 1024, "h": 576, "cap": "在港都科技三三會會長鄭明智(右)、順發電腦董事長吳錦昌(左)的鳴槍下，跑者隨即以穩健步伐衝出起跑線，爭取最佳成績", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20250420700393-431208"}, {"src": "assets/full/g08.jpg", "w": 1024, "h": 576, "cap": "WingStars台鋼啦啦隊在起跑線上為跑者們加油打氣", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20250420700393-431208"}, {"src": "assets/full/g09.jpg", "w": 1024, "h": 575, "cap": "第四屆路跑：跑者在世運主場館起終點拱門前合影", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20250420700578-431401"}, {"src": "assets/full/g10.jpg", "w": 1024, "h": 673, "cap": "第四屆「順發X港都公益路跑」再度邀您熱情響應，將愛心化為實際行動為下一代跑出新未來！", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20240831700624-431208"}, {"src": "assets/full/g11.jpg", "w": 1024, "h": 646, "cap": "主辦單位代表合影，左起：港都科技三三會2025年會長鄭明智(台郡科技董事長)、2023年會長邢家蓁(進泰電子董事長)、2024年會長李孔文(大田精密董事長)及順發電腦董事長吳錦昌", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20240831700624-431208"}, {"src": "assets/full/g12.jpg", "w": 1024, "h": 768, "cap": "企業家手持第四屆路跑看板，號召各界一起參與", "s": "中時新聞網", "u": "https://www.chinatimes.com/newspapers/20240912000314-260204"}, {"src": "assets/full/g13.jpg", "w": 1024, "h": 769, "cap": "醫界與企業共同響應：第四屆路跑代言合影", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20240831700624-431208"}, {"src": "assets/full/g14.jpg", "w": 1024, "h": 936, "cap": "順發高舉第四屆路跑贊助企業看板", "s": "中時新聞網", "u": "https://www.chinatimes.com/newspapers/20250109000480-260210"}, {"src": "assets/full/g15.jpg", "w": 1024, "h": 575, "cap": "路跑結餘捐助高雄弱勢兒少", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20250723700201-439901"}, {"src": "assets/full/g16.jpg", "w": 1024, "h": 678, "cap": "第三屆路跑：企業家領跑隊伍準備出發", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20230424700551-431208"}, {"src": "assets/full/g17.jpg", "w": 1024, "h": 637, "cap": "本屆路跑參與人數破4千人", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20230424700551-431208"}, {"src": "assets/full/g18.jpg", "w": 1024, "h": 575, "cap": "順發電腦董事長吳錦昌(右三)頒獎並與獲獎者合影", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20230424700551-431208"}, {"src": "assets/full/g19.jpg", "w": 1024, "h": 575, "cap": "港都科技三三會會長張紋祥(右四)頒獎", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20230424700551-431208"}, {"src": "assets/full/g20.jpg", "w": 1024, "h": 1364, "cap": "第三屆路跑代言合影：為了下一代，跑出新未來", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20221215701128-431401"}, {"src": "assets/full/g21.jpg", "w": 1024, "h": 543, "cap": "第二屆路跑：數十位企業家共同領跑", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20210419700449-431205"}, {"src": "assets/full/g22.jpg", "w": 1024, "h": 574, "cap": "高雄市政府運動發展局局長侯尊堯鳴槍後，3,500位跑者奮力向前", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20210419700449-431205"}, {"src": "assets/full/g23.jpg", "w": 1024, "h": 595, "cap": "順發 3C 董事長吳錦昌(右)及港都會會長盧鏡來(左)為選手加油打氣", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20210419700449-431205"}, {"src": "assets/full/g24.jpg", "w": 1024, "h": 682, "cap": "第二屆路跑：企業家領跑團齊聲加油", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20200121700685-431298"}, {"src": "assets/full/g25.jpg", "w": 1024, "h": 681, "cap": "首屆Run for Future公益路跑獲得民眾熱烈回響及高度肯定", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20200121700685-431298"}, {"src": "assets/full/g26.jpg", "w": 1024, "h": 682, "cap": "高雄大老闆都來了：用腳做公益", "s": "中時新聞網", "u": "https://www.chinatimes.com/realtimenews/20200121001516-260405"}, {"src": "assets/full/g27.jpg", "w": 1024, "h": 682, "cap": "順發電腦與高雄港都上市櫃企業家協會合辦「Run For Future順發x港都公益路跑」，去年首屆盈餘近百萬幫助偏鄉學童。（吳錦發提供／林宏聰高雄傳真）", "s": "中時新聞網", "u": "https://www.chinatimes.com/realtimenews/20200121001516-260405"}, {"src": "assets/full/g28.jpg", "w": 1024, "h": 682, "cap": "第一屆路跑：跑者湧出起跑拱門", "s": "中時新聞網", "u": "https://www.chinatimes.com/newspapers/20190306000506-260204"}, {"src": "assets/full/g29.jpg", "w": 597, "h": 396, "cap": "路跑結餘幫助偏鄉學子：選手起跑前集合", "s": "運動筆記", "u": "https://running.biji.co/index.php?q=news&act=info&id=105203"}, {"src": "assets/full/g30.jpg", "w": 590, "h": 492, "cap": "第五屆路跑完賽獎牌：收藏一座城市的感動", "s": "福爾摩沙時報", "u": "https://formosa.ikh.tw/index.php?pn=vw&id=i327ec32zv5l"}, {"src": "assets/full/g31.jpg", "w": 1024, "h": 1536, "cap": "第五屆路跑：參與企業的六大具體效益", "s": "福爾摩沙時報", "u": "https://formosa.ikh.tw/index.php?pn=vw&id=i327ec32zv5l"}, {"src": "assets/full/g32.jpg", "w": 1695, "h": 952, "cap": "第五屆路跑：2027年4月18日高雄港灣文化廊帶開跑", "s": "福爾摩沙時報", "u": "https://formosa.ikh.tw/index.php?pn=vw&id=i327ec32zv5l"}, {"src": "assets/full/g33.jpg", "w": 1451, "h": 811, "cap": "順發與慈濟簽約，啟動再生電腦企業共善", "s": "慈善新聞網", "u": "https://www.tcnews.com.tw/news/item/20085.html"}, {"src": "assets/full/g34.jpg", "w": 1024, "h": 681, "cap": "順發×慈濟企業共善簽約儀式全體合影", "s": "工商時報", "u": "https://www.ctee.com.tw/news/20230929700724-430503"}, {"src": "assets/full/g35.jpg", "w": 1589, "h": 960, "cap": "由順發捐贈物品經慈濟再生電腦團隊整修後，無償贈送給弱勢家庭學童以及其他社會福利機構使用", "s": "慈善新聞網", "u": "https://www.tcnews.com.tw/news/item/20085.html"}, {"src": "assets/full/g36.jpg", "w": 1679, "h": 961, "cap": "慈濟新竹再生電腦團隊，專案自2021年開展，截至2023年9月21日，總計已送出594部電腦至全台及澎湖共15縣市", "s": "慈善新聞網", "u": "https://www.tcnews.com.tw/news/item/20085.html"}, {"src": "assets/full/g37.jpg", "w": 1435, "h": 800, "cap": "慈濟基金會慈發處陳志明高專分享雙方合作的方向與內容", "s": "慈善新聞網", "u": "https://www.tcnews.com.tw/news/item/20085.html"}, {"src": "assets/full/g38.jpg", "w": 1176, "h": 714, "cap": "志工為孩子安裝整修好的再生電腦", "s": "慈善新聞網", "u": "https://www.tcnews.com.tw/news/item/20085.html"}, {"src": "assets/full/g39.jpg", "w": 1080, "h": 810, "cap": "志工把再生電腦一台台送到需要的家庭", "s": "慈善新聞網", "u": "https://www.tcnews.com.tw/news/item/20085.html"}, {"src": "assets/full/g40.jpg", "w": 2400, "h": 1600, "cap": "慈濟再生電腦服務推動成果發表", "s": "慈善新聞網", "u": "https://www.tcnews.com.tw/news/item/28028.html"}, {"src": "assets/full/g41.jpg", "w": 2400, "h": 1350, "cap": "再生電腦合作夥伴頒發ESG感謝狀", "s": "慈善新聞網", "u": "https://www.tcnews.com.tw/news/item/28028.html"}, {"src": "assets/full/g42.jpg", "w": 2400, "h": 1600, "cap": "歲末暖心行動：志工把再生電腦送進弱勢家庭", "s": "慈善新聞網", "u": "https://www.tcnews.com.tw/news/item/28028.html"}, {"src": "assets/full/g43.jpg", "w": 2400, "h": 1600, "cap": "歲末暖心行動：為受贈家庭現場設定電腦", "s": "慈善新聞網", "u": "https://www.tcnews.com.tw/news/item/28028.html"}, {"src": "assets/full/g44.jpg", "w": 2400, "h": 1600, "cap": "歲末暖心行動：受贈機構與志工合影", "s": "慈善新聞網", "u": "https://www.tcnews.com.tw/news/item/28028.html"}, {"src": "assets/full/g45.jpg", "w": 2400, "h": 1600, "cap": "歲末暖心行動：再生電腦一路往南送愛", "s": "慈善新聞網", "u": "https://www.tcnews.com.tw/news/item/28028.html"}, {"src": "assets/full/g46.jpg", "w": 1600, "h": 900, "cap": "高雄市教育局頒感謝狀，表揚順發捐贈偏鄉與弱勢學子線上學習帳號", "s": "風傳媒", "u": "https://www.storm.mg/article/4723024"}, {"src": "assets/full/g47.jpg", "w": 600, "h": 311, "cap": "被幫助的孩子，也有自己的故事", "s": "ETtoday", "u": "https://www.ettoday.net/news/20150805/545446.htm"}, {"src": "assets/full/g48.jpg", "w": 600, "h": 302, "cap": "受助學童的笑容，是公益最好的回報", "s": "ETtoday", "u": "https://www.ettoday.net/news/20150805/545446.htm"}, {"src": "assets/full/g49.jpg", "w": 1200, "h": 848, "cap": "順發與合作夥伴攜手推動社會幸福、消費共創", "s": "Yahoo新聞", "u": "https://tw.stock.yahoo.com/news/%E9%A0%86%E7%99%BC3c-%E6%89%93%E9%80%A0%E5%85%AC%E7%9B%8A%E5%9E%8B%E9%9B%B6%E5%94%AE%E6%96%B0%E5%85%B8%E7%AF%84-201000585.html"}, {"src": "assets/full/g50.jpg", "w": 960, "h": 540, "cap": "選擇順發，關懷台灣：吳錦昌董事長", "s": "ETtoday", "u": "https://www.ettoday.net/news/20150805/545446.htm"}, {"src": "assets/full/g51.jpg", "w": 600, "h": 338, "cap": "花一樣的錢，讓順發替你回饋社會", "s": "ETtoday", "u": "https://www.ettoday.net/news/20150805/545446.htm"}, {"src": "assets/full/g52.jpg", "w": 600, "h": 366, "cap": "吳錦昌董事長：每年捐出20%淨利幫助弱勢學童", "s": "ETtoday", "u": "https://www.ettoday.net/news/20150805/545446.htm"}, {"src": "assets/full/g53.jpg", "w": 600, "h": 338, "cap": "20 for future：每一筆消費都在做公益", "s": "ETtoday", "u": "https://www.ettoday.net/news/20150805/545446.htm"}, {"src": "assets/full/g54.jpg", "w": 792, "h": 555, "cap": "每年捐20%盈餘，帶動千萬人消費行善", "s": "遠見雜誌", "u": "https://esg.gvm.com.tw/article/621"}];
+const gb=document.querySelectorAll('.gfilters button');
+gb.forEach(b=>b.addEventListener('click',()=>{gb.forEach(x=>x.setAttribute('aria-pressed',x===b));const f=b.dataset.g;document.querySelectorAll('.gi').forEach(g=>g.hidden=!(f==='all'||g.dataset.c===f));}));
+const lb=document.getElementById('lb'),li=document.getElementById('lb-img');let cur=0,lastFocus=null;
+const vis=()=>[...document.querySelectorAll('.gi:not([hidden]) button')].map(b=>+b.dataset.i);
+function show(i){cur=i;const d=G[i],v=vis(),k=v.indexOf(i);li.src=d.src;li.alt=d.cap;li.width=d.w;li.height=d.h;
+document.getElementById('lb-cap').textContent=d.cap;document.getElementById('lb-n').textContent=(k+1)+' / '+v.length;
+const a=document.getElementById('lb-src');a.textContent='出處：'+d.s;a.href=d.u;document.getElementById('lb-full').href=d.src;
+[v[k-1],v[k+1]].forEach(j=>{if(j!==undefined){const p=new Image();p.src=G[j].src}});}
+function step(n){const v=vis(),k=v.indexOf(cur);show(v[(k+n+v.length)%v.length]);}
+function open_(i){lastFocus=document.activeElement;lb.hidden=false;document.body.style.overflow='hidden';show(i);lb.querySelector('.lb-x').focus();}
+function close_(){lb.hidden=true;document.body.style.overflow='';li.removeAttribute('src');lastFocus&&lastFocus.focus();}
+document.getElementById('gwall').addEventListener('click',e=>{const b=e.target.closest('button[data-i]');if(b)open_(+b.dataset.i);});
+lb.querySelector('.lb-x').onclick=close_;lb.querySelector('.lb-prev').onclick=()=>step(-1);lb.querySelector('.lb-next').onclick=()=>step(1);
+lb.addEventListener('click',e=>{if(e.target===lb||e.target.classList.contains('lb-fig'))close_();});
+addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key==='Escape')close_();else if(e.key==='ArrowLeft')step(-1);else if(e.key==='ArrowRight')step(1);});
+let tx=null;lb.addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
+lb.addEventListener('touchend',e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)step(dx<0?1:-1);tx=null;});
+</script>
+</body>
+</html>
