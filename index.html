@@ -824,5 +824,7 @@ addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key==='Escape')close_();
 let tx=null;lb.addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
 lb.addEventListener('touchend',e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)step(dx<0?1:-1);tx=null;});
 </script>
+<!-- 窄螢幕漢堡選單：連結自動複製頂部選單（2026-10-14，共用模組 /static/nav-burger.js） -->
+<script src="/static/nav-burger.js?v=1" defer data-links=".nav ul li.opt a" data-host=".nav .wrap" data-bp="1180" data-btn-bg="rgba(255,255,255,.94)" data-btn-fg="#0a1f3d" data-btn-ring="rgba(10,31,61,.18)" data-panel-bg="#ffffff" data-panel-fg="#0a1f3d" data-accent="#1c56b8" data-line="rgba(10,31,61,.12)" data-cta=".nav ul li.keep a" data-cta-bp="560"></script>
 </body>
 </html>
