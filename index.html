@@ -68,7 +68,7 @@ section{position:relative}
 .nav.solid ul a{color:var(--ink)}
 .nav ul a:hover{text-decoration:underline;text-underline-offset:8px;text-decoration-thickness:2px}
 .nav .btn{padding:14px 22px;min-height:52px}
-@media (max-width:1180px){.nav ul li.opt{display:none}}
+@media (max-width:1260px){.nav ul li.opt{display:none}}
 
 /* ---------- HERO ---------- */
 .hero{min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--blue-night)}
@@ -321,6 +321,49 @@ footer a{color:#e3ecf8;text-decoration-color:rgba(255,255,255,.35);text-underlin
   .hero h1{font-size:46px}
   .q-feature blockquote{font-size:44px}
 }
+/* PEERS-CSS-START：首批足跡夥伴（字一律 ≥20px） */
+.peers{background:#fff;padding:140px 0}
+.peers h2{font-size:clamp(34px,4.4vw,56px);line-height:1.25;margin:18px 0 26px}
+.pe-head{max-width:46em}
+.pe-roster{list-style:none;margin:40px 0 56px;padding:0;display:flex;flex-wrap:wrap;gap:12px}
+.pe-roster a{display:inline-flex;align-items:center;min-height:52px;padding:10px 22px;border:2px solid var(--line);border-radius:999px;background:var(--mist);color:var(--ink);font:700 20px/1.3 var(--sans);text-decoration:none}
+.pe-roster a:hover,.pe-roster a:focus-visible{border-color:var(--blue);background:var(--sky)}
+.pe-roster .sun a{background:var(--sun);border-color:var(--sun)}
+.pe-list{display:grid;gap:40px}
+.pe{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 12px 40px -24px rgba(10,31,61,.35);scroll-margin-top:96px}
+.pe-photo{margin:0;position:relative;background:var(--sky);display:flex;flex-direction:column}
+.pe-photo img{width:100%;flex:1;min-height:260px;object-fit:cover;display:block}
+.pe-photo figcaption{padding:14px 20px;font:500 20px/1.5 var(--sans);color:var(--ink-soft);background:var(--mist)}
+.pe-tag{position:absolute;top:14px;left:14px;background:rgba(10,31,61,.82);color:#fff;font:700 20px/1 var(--sans);padding:8px 14px;border-radius:999px}
+.pe-body{padding:40px 44px 36px;min-width:0}
+.pe-role{margin:0;font:700 20px/1.5 var(--sans);color:var(--blue);letter-spacing:.06em}
+.pe h3{font-size:clamp(30px,3vw,38px);line-height:1.3;margin:6px 0 14px}
+.pe-lede{font:400 21px/1.85 var(--sans);color:var(--ink-soft);margin:0 0 26px}
+.pe-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line)}
+.pe-stats div{padding:18px 18px 18px 0;border-bottom:1px solid var(--line)}
+.pe-stats div:nth-child(odd){padding-right:24px}
+.pe-stats b{display:block;font:800 34px/1.2 var(--serif);color:var(--blue-deep)}
+.pe-stats span{display:block;font:400 20px/1.55 var(--sans);color:var(--ink-soft);margin-top:4px}
+.pe-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.pe-actions .btn{padding:16px 26px;min-height:56px}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover,.btn-blue:focus-visible{background:var(--blue-deep)}
+.pe-tl{grid-column:1/-1;border-top:1px solid var(--line);background:var(--mist)}
+.pe-tl>summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 44px;min-height:64px;font:700 20px/1.4 var(--sans);color:var(--ink)}
+.pe-tl>summary::-webkit-details-marker{display:none}
+.pe-tl>summary::after{content:"＋";font-size:28px;color:var(--blue)}
+.pe-tl[open]>summary::after{content:"－"}
+.pe-tl ol{list-style:none;margin:0;padding:6px 44px 36px}
+.pe-tl li{display:grid;grid-template-columns:9.5em minmax(0,1fr);gap:8px 24px;padding:20px 0;border-top:1px solid var(--line)}
+.pe-tl .yr{font:800 20px/1.5 var(--sans);color:var(--blue)}
+.pe-tl h4{font:700 22px/1.5 var(--serif);margin:0 0 6px;color:var(--ink)}
+.pe-tl p{font:400 20px/1.75 var(--sans);color:var(--ink-soft);margin:0}
+.pe-tl .src{display:block;margin-top:8px;font:500 20px/1.6 var(--sans);color:var(--ink-soft)}
+.pe-tl .src a{color:var(--blue)}
+.pe-note{margin:44px 0 0;font:400 20px/1.8 var(--sans);color:var(--ink-soft)}
+@media (max-width:1000px){.pe{grid-template-columns:1fr}.pe-photo img{min-height:0;aspect-ratio:16/10}.pe-body{padding:32px 26px 28px}.pe-tl>summary{padding:20px 26px}.pe-tl ol{padding:6px 26px 30px}}
+@media (max-width:700px){.peers{padding:100px 0}.pe-stats{grid-template-columns:1fr}.pe-stats div,.pe-stats div:nth-child(odd){padding-right:0}.pe-tl li{grid-template-columns:1fr;gap:4px}}
+/* PEERS-CSS-END */
 </style>
 </head>
 <body>
@@ -334,6 +377,7 @@ footer a{color:#e3ecf8;text-decoration-color:rgba(255,255,255,.35);text-underlin
         <li class="opt"><a href="#quotes">公益金句</a></li>
         <li class="opt"><a href="#power">公益的力量</a></li>
         <li class="opt"><a href="#sunfar">順發示範</a></li>
+        <li class="opt"><a href="#peers">足跡夥伴</a></li>
         <li class="opt"><a href="#media">媒體牆</a></li>
         <li class="opt"><a href="#photos">照片牆</a></li>
         <li class="opt"><a href="https://event.bymyway.com/curated/rongtree/" target="_blank" rel="noopener">榮樹下</a></li>
@@ -557,6 +601,87 @@ footer a{color:#e3ecf8;text-decoration-color:rgba(255,255,255,.35);text-underlin
   </div>
 </section>
 
+<!-- PEERS-START（2026-10-16 教練交辦：首批足跡夥伴；內容由各人專屬頁面的「公益足跡」逐字擷取） -->
+<section class="peers" id="peers" aria-labelledby="pe-title">
+  <div class="wrap">
+    <div class="pe-head">
+      <div class="eyebrow">首批足跡夥伴・已有 7 位</div>
+      <h2 id="pe-title">好事，已經有人在做了。</h2>
+      <p class="lead">不用等到一百位。順發之外，已有 6 位的公益足跡整理成專屬網頁，每一則足跡都附出處。以下是他們頁面裡的「公益足跡」，原文擷取；想看完整故事，點「看完整專屬頁」。</p>
+    </div>
+    <ul class="pe-roster" aria-label="首批足跡夥伴名單"><li><a href="#pe-andy-chen">陳顯立執行長</a></li><li><a href="#pe-ruifeng">何瑞峰牧師</a></li><li><a href="#pe-lidie">張麗蝶董事長</a></li><li><a href="#pe-patrick-chu">朱元中顧問</a></li><li><a href="#pe-angel-sister">陳淑玲天使姐姐</a></li><li><a href="#pe-social-good">大樹教練・吳大樹</a></li><li class="sun"><a href="#sunfar">吳錦昌董事長・順發示範單位</a></li></ul>
+    <div class="pe-list">
+<article class="pe" id="pe-andy-chen">
+  <figure class="pe-photo"><img src="assets/people/andy-chen.jpg" alt="示意插畫：讀著孩子們寄來的感謝信" width="720" height="405" loading="lazy"><span class="pe-tag">示意插畫</span><figcaption>讀著孩子們寄來的感謝信</figcaption></figure>
+  <div class="pe-body">
+    <p class="pe-role">好廣告數據創辦人・《信任效應》作者</p>
+    <h3>陳顯立執行長</h3>
+    <p class="pe-lede">傳統的公益活動和廣告，常常「像放煙火」：活動一結束，紀錄和聲量就消失了。陳顯立用 20 年的長期認養證明「持續」的力量，再用 AI 時代的技術，讓善行變成可以被看見、被引用、長期累積的數位資產。</p>
+    <div class="pe-stats"><div><b>20 年</b><span>連續每月認養家扶學童</span></div><div><b>30+ 位</b><span>每月固定支持的家扶孩子</span></div><div><b>100+ 封</b><span>收到的畢業信與感謝信</span></div><div><b>100 家</b><span>Run for Future 贊助企業免費 AI 內容佈局</span></div></div>
+    <div class="pe-actions"><a class="btn btn-blue" href="https://event.bymyway.com/curated/andy-chen/#give" target="_blank" rel="noopener">看完整專屬頁 <span class="arrow" aria-hidden="true">→</span></a></div>
+  </div>
+  <details class="pe-tl"><summary>展開足跡時間軸（6 則）</summary><ol><li><span class="yr">30 歲起・約 2003</span><div><h4>開始認養家扶學童，一路 20 年</h4><p>有能力之後，每月固定認養 30 多位家扶中心孩子，至今收到超過 100 封畢業與感謝信。</p><span class="src">來源：本人受訪分享（認養起始年份待本人確認）</span></div></li><li><span class="yr">2014</span><div><h4>青少年職涯領航 校園巡迴講座</h4><p>以燦坤營運長身分走進校園，和學生分享「夢想實踐！用創意打造新事業」。</p><span class="src"><a href="https://www.youtube.com/watch?v=vEvCprY5Ppc" target="_blank" rel="noopener">來源：講座影片（YouTube）</a></span></div></li><li><span class="yr">2020 起</span><div><h4>病後轉念，把力氣放在「人」身上</h4><p>肺腺癌康復後，重新投入 BNI 商會，並邀請 BNI 夥伴免費參與 TeSA 的有價課程與活動，把商業網絡變成互助網絡。</p><span class="src"><a href="https://www.facebook.com/li0204/" target="_blank" rel="noopener">來源：本人 Facebook 貼文、受訪分享</a></span></div></li><li><span class="yr">2021</span><div><h4>陪青年想清楚職涯：TYCIA 公益講座</h4><p>受臺灣青年職涯創新協會邀請，直播分享「把自己當公司經營，創造個體商業模式」。</p><span class="src"><a href="https://www.youtube.com/watch?v=lK5fFHZ9UF8" target="_blank" rel="noopener">來源：TYCIA 直播（YouTube）</a></span></div></li><li><span class="yr">2021</span><div><h4>南區 T 小聚：與青年面對面</h4><p>在「T 大使 × 未來智造者」青年計畫中擔任企業分享講者，回答年輕人的創業與職涯提問。</p><span class="src"><a href="https://www.youtube.com/watch?v=jfAmGnNnvRI" target="_blank" rel="noopener">來源：活動影片（YouTube）</a></span></div></li><li><span class="yr">2026～2027</span><div><h4>Run for Future 順發 × 港都公益路跑</h4><p>認同順發電腦吳錦昌董事長「利他即利己」的理念，好廣告數據為 100 家贊助企業免費提供 AI 內容佈局與 ESG 路跑報告書；企業贊助 6 萬元參加，換得市場價值約 50～100 萬元的數位資產。</p><span class="src"><a href="https://lohasnet.tw/Sunfar2027/" target="_blank" rel="noopener">來源：本人受訪分享；活動資訊見 樂活報名網</a></span></div></li></ol></details>
+</article>
+<article class="pe" id="pe-ruifeng">
+  <figure class="pe-photo"><img src="assets/people/ruifeng.jpg" alt="短宣隊員與泰北長輩相擁" width="720" height="382" loading="lazy"><figcaption>短宣隊員與泰北長輩相擁</figcaption></figure>
+  <div class="pe-body">
+    <p class="pe-role">華岡福音隊・泰緬邊境同行</p>
+    <h3>何瑞峰牧師</h3>
+    <p class="pe-lede">他的公益沒有基金會的名字，而是一雙雙走進村落、營區與宿舍的腳。從台灣鄉鎮到泰緬邊境，華岡福音隊用一個個寒暑假，把「陪伴」走成看得見的路。</p>
+    <div class="pe-stats"><div><b>50+ 年</b><span>華岡福音隊從 1974 年走到今天的福音腳蹤</span></div><div><b>7–8 年</b><span>疫情前連續在苗栗造橋出隊</span></div><div><b>2 週 7 案</b><span>他在軍中面對的危機，催生了全軍團心理防治講座</span></div></div>
+    <div class="pe-actions"><a class="btn btn-blue" href="https://event.bymyway.com/curated/ruifeng/#charity" target="_blank" rel="noopener">看完整專屬頁 <span class="arrow" aria-hidden="true">→</span></a></div>
+  </div>
+  <details class="pe-tl"><summary>展開足跡時間軸（12 則）</summary><ol><li><span class="yr">1974</span><div><h4>華岡福音隊誕生</h4><p>柯希能牧師帶著文化大學學生，利用寒暑假開福音車、騎機車，挨家挨戶走遍台灣——這份傳統，日後交到何牧師手上。</p><span class="src"><a href="https://ct.org.tw/html/news/3-3.php?cat=4&amp;article=1381238" target="_blank" rel="noopener">出處：以琳基督徒中心／論壇報</a></span></div></li><li><span class="yr">約 2004</span><div><h4>把講座送進軍營</h4><p>還是二等兵，就代理旅級心輔官。兩週內部隊發生七起自傷案，他提議以「心理防治講座」預防，邀基甸會免費演講、贈送聖經，從一個營擴及七個營、整個軍團。</p><span class="src"><a href="https://www.youtube.com/watch?v=Vkgha3MMhSQ" target="_blank" rel="noopener">出處：基甸會年會見證影片</a></span></div></li><li><span class="yr">2017 起</span><div><h4>第一次飛往泰北大谷地</h4><p>應陽明山錫安堂方勇牧師的邀請，帶華岡福音隊與嘉義基督教醫院同行，走進孤軍後裔與難民聚居的大谷地。</p><span class="src"><a href="https://goodtvnews.goodtv.tv/goodtvnews/2026video222/" target="_blank" rel="noopener">出處：GOOD TV 2026／講道 2026.06.28</a></span></div></li><li><span class="yr">2018</span><div><h4>苗栗造橋大西，一住七八年</h4><p>鄉間小教會容不下整隊人，一位近九十歲、自美返鄉的長輩把自家三層樓預備給福音隊；疫情前連續七、八年在苗栗出隊。</p><span class="src"><a href="https://www.youtube.com/watch?v=8f9vtEnls60" target="_blank" rel="noopener">出處：講道〈讓萬民都聽見〉</a></span></div></li><li><span class="yr">2018</span><div><h4>花蓮福音隊</h4><p>寒暑假出隊的足跡從北到南、從西到東，花蓮也留下華岡學生的腳印。</p><span class="src"><a href="https://www.youtube.com/watch?v=yjE2f7LQE0Q" target="_blank" rel="noopener">出處：華岡團契 YouTube</a></span></div></li><li><span class="yr">2021</span><div><h4>疫情裡的守望</h4><p>文大宿舍爆發群聚感染，他第一時間聯絡住宿的團契弟兄，並為住宿生、師長、家長與第一線行政人員發起代禱。</p><span class="src"><a href="https://ct.org.tw/html/news/3-3.php?cat=10&amp;article=1385667" target="_blank" rel="noopener">出處：基督教論壇報 2021.06.03</a></span></div></li><li><span class="yr">2021</span><div><h4>一對一的學青守望</h4><p>學生車禍、出意外，小組第一時間通報、牧者趕到現場；他和師母也打開家門，請學青來家裡吃飯。</p><span class="src"><a href="https://ct.org.tw/html/news/3-3.php?cat=80&amp;article=1388134" target="_blank" rel="noopener">出處：基督教論壇報 2021.11.17</a></span></div></li><li><span class="yr">2023</span><div><h4>高雄岡山潭底福音隊</h4><p>寒、暑假兩度到岡山潭底，挨家挨戶探訪、為病人禱告，教會在當地建立起來。</p><span class="src"><a href="https://www.youtube.com/watch?v=hRnv3sIV-s4" target="_blank" rel="noopener">出處：華岡團契 YouTube</a></span></div></li><li><span class="yr">2023</span><div><h4>疫後重返大谷地</h4><p>緬甸內戰難民暫住廢校舍。十歲女孩說：「我們很喜歡這裡，因為這裡沒有槍聲，可以一覺到天亮。」</p><span class="src"><a href="https://www.youtube.com/watch?v=8f9vtEnls60" target="_blank" rel="noopener">出處：講道〈讓萬民都聽見〉</a></span></div></li><li><span class="yr">2026</span><div><h4>GOOD TV 專題「愛在泰北」</h4><p>華岡團契配搭嘉基義診、協助沒有身分證的人就醫，帶兒童主日學、走進難民家庭家訪。</p><span class="src"><a href="https://goodtvnews.goodtv.tv/goodtvnews/2026video222/" target="_blank" rel="noopener">出處：GOOD TV 2026.07</a></span></div></li><li><span class="yr">2026.08</span><div><h4>福音隊來到北投</h4><p>8/24–31 華岡福音隊到以琳北投教會，打地鋪、早上六點起床，在城市公園與街區傳福音。</p><span class="src"><a href="https://www.beclass.com/rid=30527d36a856bec4821f" target="_blank" rel="noopener">出處：BeClass 報名頁</a></span></div></li><li><span class="yr">2026.10</span><div><h4>坐到榮樹下</h4><p>把華岡到泰緬邊境的故事，說給企業家與更多願意同行的人聽。</p><span class="src"><a href="https://player.soundon.fm/p/01bac58b-741f-4cbc-8fa6-58dd45f24923/episodes/932ddeb6-fea3-4db9-987a-b44029b0423c" target="_blank" rel="noopener">出處：榮樹下 EP.06</a></span></div></li></ol></details>
+</article>
+<article class="pe" id="pe-lidie">
+  <figure class="pe-photo"><img src="assets/people/lidie.jpg" alt="台新「您的一票 決定愛的力量」" width="720" height="348" loading="lazy"><figcaption>台新「您的一票 決定愛的力量」</figcaption></figure>
+  <div class="pe-body">
+    <p class="pe-role">T1科技 ‧ 元照科技照明</p>
+    <h3>張麗蝶董事長</h3>
+    <p class="pe-lede">從 2010 年拍下第一支社福訪視影片，到今天以企業、協會與時間銀行串起資源——她做公益的方式，是陪伴，也是留下紀錄。</p>
+    <div class="pe-stats"><div><b>8</b><span>支 2010 年社福團體訪視影片</span></div><div><b>3</b><span>種公益組織角色：協會理事長、CBMC 分會會長、蘭承會會員</span></div><div><b>3</b><span>次 2026 年公益捐贈行動（中台博物館、家庭生命關懷協會、創路學園）</span></div><div><b>2</b><span>個社會企業相關合作（明樂福、編舟計畫）</span></div></div>
+    <div class="pe-actions"><a class="btn btn-blue" href="https://event.bymyway.com/curated/lidie/#giving" target="_blank" rel="noopener">看完整專屬頁 <span class="arrow" aria-hidden="true">→</span></a></div>
+  </div>
+  <details class="pe-tl"><summary>展開足跡時間軸（14 則）</summary><ol><li><span class="yr">2010</span><div><h4>社福團體訪視紀錄</h4><p>安康啟智、方舟、聲暉、讓玩具去旅行。</p><span class="src"><a href="https://www.youtube.com/watch?v=jXgl2MNLem0" target="_blank" rel="noopener">看影片 →</a></span></div></li><li><span class="yr">2013</span><div><h4>肯納兒烘焙專訪</h4><p>「給魚吃，不如給他們一個釣魚的機會。」</p><span class="src"><a href="https://www.youtube.com/watch?v=FaSm3s28-xk" target="_blank" rel="noopener">看影片 →</a></span></div></li><li><span class="yr">2015</span><div><h4>生命教育推廣：孝行</h4><p>記錄中華民國生命教育推廣協會活動。</p><span class="src"><a href="https://www.youtube.com/watch?v=_5itPAxR46w" target="_blank" rel="noopener">看影片 →</a></span></div></li><li><span class="yr">2018</span><div><h4>當選生命教育推動協會理事長</h4><p>社團法人中華全球生命教育推動協會。</p><span class="src"><a href="https://www.t1ccfl.com/portal_a1.php?owner_num=a1_48084&amp;button_num=a1" target="_blank" rel="noopener">看官網 →</a></span></div></li><li><span class="yr">2020</span><div><h4>明樂福社會企業開業</h4><p>中台灣第一家尤努斯社會企業，到場祝賀。</p><span class="src"><a href="https://www.scooptw.com/lifetaste/47068/" target="_blank" rel="noopener">看報導 →</a></span></div></li><li><span class="yr">2020</span><div><h4>編舟計畫：資助身障者創業</h4><p>以理事長身分合作，企業主捐款全額資助入會費。</p><span class="src"><a href="https://www.ctee.com.tw/news/20200827700748-430502" target="_blank" rel="noopener">看報導 →</a></span></div></li><li><span class="yr">2021</span><div><h4>時間銀行說明會</h4><p>主講時間銀行設置與系統。</p><span class="src"><a href="https://www.youtube.com/watch?v=qrWFjUQ882A" target="_blank" rel="noopener">看影片 →</a></span></div></li><li><span class="yr">2022</span><div><h4>三立《台灣亮起來》</h4><p>榮譽志工特別專訪，以企業實現公益 SDGs 價值。</p><span class="src"><a href="https://www.youtube.com/watch?v=ZpNAguqjxqw" target="_blank" rel="noopener">看影片 →</a></span></div></li><li><span class="yr">2023</span><div><h4>「光與植物的健康生活」講座</h4><p>擔任臺灣心園藝發展協會 3 月心講座講師。</p><span class="src"><a href="https://www.facebook.com/t1lighting/" target="_blank" rel="noopener">看粉絲團 →</a></span></div></li><li><span class="yr">2023</span><div><h4>友善社匯專區</h4><p>以元照董事長身分出席豐年代 × 編舟計畫活動。</p><span class="src"><a href="https://www.eracom.com.tw/EraNews/Home/NextEra/2023-06-29/1260858.html" target="_blank" rel="noopener">看報導 →</a></span></div></li><li><span class="yr">2026.01</span><div><h4>AI行動咖啡吧捐贈</h4><p>與蘭承會代表共同捐贈中台世界博物館。</p><span class="src"><a href="https://www.tcpttw.com/local/2026/01/28/241633/" target="_blank" rel="noopener">看報導 →</a></span></div></li><li><span class="yr">2026.07</span><div><h4>中部CBMC百人福音餐會</h4><p>以中軟8C分會會長身分主辦，強化「一領一」陪伴。</p><span class="src"><a href="https://cdn-news.org/News.aspx?EntityID=News&amp;PK=00000000a48c0d3fcc4b6c32903f7143bf10a491b4" target="_blank" rel="noopener">看報導 →</a></span></div></li><li><span class="yr">2026.09</span><div><h4>守護母嬰與脆弱家庭</h4><p>隨蘭承會捐款台灣家庭生命關懷協會。</p><span class="src"><a href="https://focusnews.com.tw/2026/09/719483/" target="_blank" rel="noopener">看報導 →</a></span></div></li><li><span class="yr">2026.10</span><div><h4>支持中輟青少年</h4><p>隨蘭承會捐款創路學園。</p><span class="src"><a href="https://focusnews.com.tw/2026/10/725630/" target="_blank" rel="noopener">看報導 →</a></span></div></li></ol></details>
+</article>
+<article class="pe" id="pe-patrick-chu">
+  <figure class="pe-photo"><img src="assets/people/patrick-chu.jpg" alt="朱元中於行政院 PDIS 簡報全人樂活公益新創計畫" width="720" height="405" loading="lazy"><figcaption>朱元中於行政院 PDIS 簡報全人樂活公益新創計畫</figcaption></figure>
+  <div class="pe-body">
+    <p class="pe-role">天下顧問・B 型企業</p>
+    <h3>朱元中顧問</h3>
+    <p class="pe-lede">他沒有把公益當成賺錢之後的「加分題」，而是從創業第一天就把利他放進公司的設計裡：B 型企業、時間銀行、全人樂活據點、免費公益講座。十一年來，一步一步留下的足跡，都整理在這裡。</p>
+    <div class="pe-stats"><div><b>No.9</b><span>台灣第 9 家 B 型企業（2016 年 4 月通過認證）</span></div><div><b>3座</b><span>Best For The World 社區獎（2019、2021、2022，另有 2019 總體獎）</span></div><div><b>2處</b><span>全人樂活據點（基隆（2020）、竹科（2022））</span></div><div><b>4場</b><span>免費公益講座（2026 春假，新竹連續四天）</span></div></div>
+    <div class="pe-actions"><a class="btn btn-blue" href="https://event.bymyway.com/curated/patrick-chu/#good" target="_blank" rel="noopener">看完整專屬頁 <span class="arrow" aria-hidden="true">→</span></a></div>
+  </div>
+  <details class="pe-tl"><summary>展開足跡時間軸（11 則）</summary><ol><li><span class="yr">2015</span><div><h4>把「利他」寫進創業初衷</h4><p>與臺大 EMBA 同學創立天下顧問，目標是不追求高利潤、講求經驗傳承，把多年職場經驗轉化為回饋社會的力量。</p><span class="src">出處：臺大 EMBA 專訪，2016</span></div></li><li><span class="yr">2016.04</span><div><h4>台灣第 9 家 B 型企業</h4><p>成立剛滿一年就通過 B Lab 認證，公司治理、員工、環境、社區、客戶五大面向都要達標。</p><span class="src">出處：臺大 EMBA 專訪，2016</span></div></li><li><span class="yr">2016.08</span><div><h4>好工具，分享給同業</h4><p>在臺大 EMBA 社會創新論壇分享線上組織健診；本著 B 型企業的共享精神，把這套工具也提供給其他顧問公司使用。</p><span class="src">出處：臺大 EMBA 社會創新論壇，2016</span></div></li><li><span class="yr">2019</span><div><h4>Best For The World 總體獎＋社區獎</h4><p>在全球數千家 B 型企業評比中，同一年拿下總體獎與社區獎。</p><span class="src">出處：天下顧問官網</span></div></li><li><span class="yr">2020.05</span><div><h4>天下公益計畫起跑</h4><p>推出「公益競技場」，用常態公益競賽幫非營利組織募款、提升效能與資訊透明；同時發起「天下聯招」，串聯夥伴分享優質內容。</p><span class="src">出處：天下顧問頻道，2020.05.15</span></div></li><li><span class="yr">2020.06</span><div><h4>時間銀行，讓志工時數會流動</h4><p>為志工和需要志工的機構打造區塊鏈時間銀行平台，志工服務可以產生、使用、轉讓時間幣。6 月 24 日成立中華全人樂活協會推動公益計畫。</p><span class="src">出處：天下顧問頻道，2020.06.01、2020.11.26</span></div></li><li><span class="yr">2020.07</span><div><h4>帶著公益新創計畫到行政院</h4><p>前往行政院 PDIS（公共數位創新空間）簡報全人樂活公益新創計畫，說明時間銀行構想。</p><span class="src">出處：PDIS 影音紀錄，2020.07.22</span></div></li><li><span class="yr">2020.11</span><div><h4>第一個據點：全人樂活＠基隆</h4><p>協會承接基隆一處場館，成立第一個全人樂活據點，讓更多夥伴能使用這個空間。</p><span class="src">出處：天下顧問頻道，2020.11.26</span></div></li><li><span class="yr">2021</span><div><h4>天公幣上線＋再獲社區獎</h4><p>天公幣時間銀行讓志工用時數兌換商品與服務；提供折扣的商家與專業人士，也因此一起參與了公益。同年再獲 Best For The World 社區獎。</p><span class="src">出處：天下顧問頻道，2021.08.05；天下顧問官網</span></div></li><li><span class="yr">2022</span><div><h4>全人樂活＠竹科＋第三座社區獎</h4><p>在新竹開設竹科館，設有讀書區、桌遊區與學習區，固定舉辦課程與公益講座。同年第三度獲得社區獎。</p><span class="src">出處：天下顧問頻道，2022.07.22；天下顧問官網</span></div></li><li><span class="yr">2026.04</span><div><h4>天下公益講座：春假四場免費</h4><p>4 月 3 日到 6 日在新竹竹科館連辦四場免費公益講座，由朱元中主講，未來將不定期舉辦。</p><span class="src">出處：天下顧問官網，2026.03.15</span></div></li></ol></details>
+</article>
+<article class="pe" id="pe-angel-sister">
+  <figure class="pe-photo"><img src="assets/people/angel-sister.jpg" alt="陳淑玲在醫院病房陪伴病童與家屬" width="720" height="538" loading="lazy"><figcaption>在高醫癌症兒童病房當志工，分享耶穌的愛（攝影／基督教今日報 林子騫）</figcaption></figure>
+  <div class="pe-body">
+    <p class="pe-role">CBMC 高雄一分會會長・職場宣教者</p>
+    <h3>陳淑玲天使姐姐</h3>
+    <p class="pe-lede">從病房到職場，從高雄到基隆、嘉義。她走過的每一步，都是因為曾經被病痛壓傷，所以更懂得陪伴正在受苦的人。</p>
+    <div class="pe-stats"><div><b>3年</b><span>幾乎每週往返高雄—基隆（2012 年起）</span></div><div><b>近 2萬</b><span>每月自付的交通費（只為陪一個家庭）</span></div><div><b>1000+</b><span>人在雲端為大哥代禱（大哥最後沒有截肢）</span></div><div><b>5個</b><span>每週帶領的小組與聚會（2019 年報導時）</span></div></div>
+    <div class="pe-actions"><a class="btn btn-blue" href="https://event.bymyway.com/curated/angel-sister/#footprint" target="_blank" rel="noopener">看完整專屬頁 <span class="arrow" aria-hidden="true">→</span></a></div>
+  </div>
+  <details class="pe-tl"><summary>展開足跡時間軸（8 則）</summary><ol><li><span class="yr">護理師歲月</span><div><h4>從照顧母親，到照顧每一位病人</h4><p>因母親病倒走進醫護，在病床邊學會陪伴的功課。</p><span class="src">出處：CBMC 會員見證影片</span></div></li><li><span class="yr">病房志工</span><div><h4>高醫癌症兒童病房</h4><p>走進最需要盼望的病房，陪伴癌童與家屬，分享耶穌的愛。</p><span class="src">出處：基督教今日報 2019/3/29</span></div></li><li><span class="yr">2012 – 2016</span><div><h4>基隆三年，一家人歸主</h4><p>每週往返、每月自付近 2 萬交通費，最後換來一個家庭的修復。</p><span class="src">出處：基督教今日報、CBMC 會員見證</span></div></li><li><span class="yr">2015 起</span><div><h4>加入 CBMC，帶領職場小組</h4><p>每週帶領雲端禱告小組、CBMC 聚會與教會小組，也曾主持大型福音佈道會。</p><span class="src">出處：基督教今日報 2019/3/29</span></div></li><li><span class="yr">嘉義拓展</span><div><h4>陪一個破碎的家，走了三年</h4><p>她遇見一位個性軟弱、家庭破碎的女孩，為她禱告、陪她成長。三年後家庭翻轉，女孩帶領更多人信主，連夫家也宣告要成為基督化家庭。</p><span class="src">出處：CBMC 會員見證影片（2019）</span></div></li><li><span class="yr">2019.03</span><div><h4>病床前，為大哥洗腳施洗</h4><p>大哥原本可能和母親一樣面臨截肢，上千位弟兄姊妹在雲端一起代禱。開刀前一晚她為大哥施洗，大哥最後沒有截肢。</p><span class="src"><a href="https://cdn-news.org/news/17334" target="_blank" rel="noopener">出處：基督教今日報 2019/3/29、CBMC 見證影片</a></span></div></li><li><span class="yr">2019.07.04</span><div><h4>8C 咖啡喜樂學堂講座</h4><p>主講「向耶穌學開發及領導」，結尾呼召時，現場有數位姊妹舉手決志。</p><span class="src"><a href="https://cdn-news.org/news/18418" target="_blank" rel="noopener">出處：基督教今日報 2019/7/5</a></span></div></li><li><span class="yr">每週三・中午</span><div><h4>CBMC 高雄一分會</h4><p>以會長身分帶領分會，為高雄工商人士打造彼此扶持的屬靈家人。</p><span class="src">出處：CBMC 總會官網分會頁</span></div></li></ol></details>
+</article>
+<article class="pe" id="pe-social-good">
+  <figure class="pe-photo"><img src="assets/people/social-good.jpg" alt="蔦松藝術高中舞蹈科演出" width="600" height="400" loading="lazy"><figcaption>蔦松藝術高中舞蹈科演出《舞扇清賢》（廖素貞／大紀元 2020）</figcaption></figure>
+  <div class="pe-body">
+    <p class="pe-role">真公益發起人</p>
+    <h3>大樹教練・吳大樹</h3>
+    <p class="pe-lede">24 歲開始創業，在中國大陸工作 6 年後回到台灣。2013 年起把演講變成公益，一講就是十多年。</p>
+    <div class="pe-stats"><div><b>21 場</b><span>2019 蔦松公益巡講，歷時約 3 個月</span></div><div><b>130 餘萬</b><span>扣除場地費後全數捐給蔦松藝術高中</span></div><div><b>NT$300</b><span>每人酌收，交通、路費、住宿發起人自理</span></div><div><b>第 16 場</b><span>桃園企業主聽完當場加碼捐 100 萬</span></div></div>
+    <div class="pe-actions"><a class="btn btn-blue" href="https://event.bymyway.com/curated/social-good/#founder" target="_blank" rel="noopener">看發起人完整足跡 <span class="arrow" aria-hidden="true">→</span></a></div>
+  </div>
+  <details class="pe-tl"><summary>展開足跡時間軸（11 則）</summary><ol><li><span class="yr">2013.09</span><div><h4>回台開講，第一場公益演講</h4><p>和大紀元桃園辦事處、海餅乾俱樂部合作，在桃園婦女館講「九型人格」。不用報名、不用簽到，來去自由。</p><span class="src">出處：大紀元 2013/9/29</span></div></li><li><span class="yr">2013.12</span><div><h4>全台公益巡講首站，桃園爆滿</h4><p>「情緒管理策略」全台巡講首站，現場近 70 人，並首創免費學習計畫。</p><span class="src">出處：大紀元 2013/12/1</span></div></li><li><span class="yr">2014.03</span><div><h4>「大樹小講」每月一場</h4><p>在桃園婦女館已辦到第五期，每月公告一次，就有近百人如期而至。</p><span class="src">出處：大紀元 2014/3/17</span></div></li><li><span class="yr">2017.12</span><div><h4>獅子會茶席講座</h4><p>國際獅子會 300-D1 區與神傳文化基金會合辦，以「文化比策略更重要」為題演講。</p><span class="src">出處：大紀元 2017/12/29</span></div></li><li><span class="yr">2019.02</span><div><h4>嘉義家扶助學金典禮</h4><p>為 155 位家扶大學生主講「打造你的核心競爭力」。</p><span class="src">出處：大紀元 2019/2/16</span></div></li><li><span class="yr">2019.03</span><div><h4>為蔦松藝術高中，全台公益巡講 21 場</h4><p>所得扣除場地費全數捐作建設基金；第 16 場在桃園，一位企業主當場捐出 100 萬元。</p><span class="src">出處：大紀元 2020/1/5</span></div></li><li><span class="yr">2020.12</span><div><h4>獅子會結合神韻，關懷癌童</h4><p>在雲林麥寮「神韻分享聯誼茶會」主講「傳承獅子精神，再現獅子榮耀」，分享獅子會精神。</p><span class="src">出處：大紀元 2020/12/2</span></div></li><li><span class="yr">2021.10</span><div><h4>一個月三場品德教育教師研習</h4><p>嘉義北興國中、台南永康、新竹 300-G1 區研討會，為老師們分享品德教育與媒體素養。</p><span class="src">出處：大紀元 2021/10</span></div></li><li><span class="yr">2024.04</span><div><h4>高雄林園「心想事成的祕訣」</h4><p>用故事談品德教育：真誠善良、為人著想，總能柳暗花明。</p><span class="src">出處：新唐人 2024/4/22</span></div></li><li><span class="yr">2025.01</span><div><h4>為重症兒童發聲</h4><p>與光點兒童重症扶助協會在台南三道門文創旅店辦公益講座，義賣病童畫作支持藝術受教權。</p><span class="src">出處：大紀元 2025/1/12</span></div></li><li><span class="yr">2026</span><div><h4>一年 25 場，還在走</h4><p>3 月到 10 月，從台南、嘉義、高雄走到金門，大多數場次免費入場。</p><span class="src">出處：大樹小講歷史紀錄</span></div></li></ol></details>
+</article>
+    </div>
+    <p class="pe-note">足跡內容與照片擷取自各人專屬頁面，出處標示於每則足跡；照片版權屬原拍攝與發布單位。標示「待本人確認」的項目，尚待本人確認。</p>
+  </div>
+</section>
+<!-- PEERS-END -->
 <!-- MEDIA -->
 <section class="media" id="media" aria-labelledby="m-title">
   <div class="wrap">
@@ -826,6 +951,6 @@ let tx=null;lb.addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive
 lb.addEventListener('touchend',e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)step(dx<0?1:-1);tx=null;});
 </script>
 <!-- 窄螢幕漢堡選單：連結自動複製頂部選單（2026-10-14，共用模組 /static/nav-burger.js） -->
-<script src="/static/nav-burger.js?v=1" defer data-links=".nav ul li.opt a" data-host=".nav .wrap" data-bp="1180" data-btn-bg="rgba(255,255,255,.94)" data-btn-fg="#0a1f3d" data-btn-ring="rgba(10,31,61,.18)" data-panel-bg="#ffffff" data-panel-fg="#0a1f3d" data-accent="#1c56b8" data-line="rgba(10,31,61,.12)" data-cta=".nav ul li.keep a" data-cta-bp="560"></script>
+<script src="/static/nav-burger.js?v=1" defer data-links=".nav ul li.opt a" data-host=".nav .wrap" data-bp="1260" data-btn-bg="rgba(255,255,255,.94)" data-btn-fg="#0a1f3d" data-btn-ring="rgba(10,31,61,.18)" data-panel-bg="#ffffff" data-panel-fg="#0a1f3d" data-accent="#1c56b8" data-line="rgba(10,31,61,.12)" data-cta=".nav ul li.keep a" data-cta-bp="560"></script>
 </body>
 </html>
