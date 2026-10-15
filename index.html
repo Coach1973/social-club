@@ -854,8 +854,8 @@ footer a{color:#e3ecf8;text-decoration-color:rgba(255,255,255,.35);text-underlin
 <section class="join" id="join" aria-labelledby="j-title">
   <div class="wrap">
     <div class="seats" id="seats" aria-hidden="true"></div>
-    <p class="seat-cap">首批 100 席・已有 50 席加入。黃色那一格是順發；下一格，可以是你。</p>
-    <p class="seat-legend"><span><b style="background:var(--sun)"></b>第 1 席・順發</span><span><b style="background:#8fc0ff"></b>已加入 50 席</span><span><b style="border:2.5px dashed var(--sun)"></b>下一席・你</span></p>
+    <p class="seat-cap">首批 100 席・已有 7 席加入。黃色那一格是順發；下一格，可以是你。</p>
+    <p class="seat-legend"><span><b style="background:var(--sun)"></b>第 1 席・順發</span><span><b style="background:#8fc0ff"></b>其他 6 席已加入</span><span><b style="border:2.5px dashed var(--sun)"></b>下一席・你</span></p>
     <h2 id="j-title">參與，就是公益。</h2>
     <p class="lead">不用等到準備好，不用一次做很多。只要願意開始，你就已經是真公益的一份子。</p>
     <div class="ctas">
@@ -904,7 +904,7 @@ addEventListener('scroll',onScroll,{passive:true});onScroll();
 
 // seats
 const seats=document.getElementById('seats');
-for(let i=0;i<100;i++){const s=document.createElement('span');s.className=i===0?'first':i<50?'on':i===50?'next':'';seats.appendChild(s);}
+for(let i=0;i<100;i++){const s=document.createElement('span');s.className=i===0?'first':i<7?'on':i===7?'next':'';seats.appendChild(s);}
 
 // counters
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
